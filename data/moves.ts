@@ -5719,6 +5719,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 		contestType: "Beautiful",
 	},
+	frostyslash: {
+		num: 827,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Frosty Slash",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target, source, move) {
+			const success = this.boost({spe: -1}, target, source);
+			if (!success && !target.hasAbility('mirrorarmor')) {
+				delete move.selfSwitch;
+			}
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		contestType: "Tough",
+	}
 	frustration: {
 		num: 218,
 		accuracy: 100,

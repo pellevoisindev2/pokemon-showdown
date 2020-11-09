@@ -26604,6 +26604,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			focusblast: ["8M", "7M", "6M", "5M", "4M"],
 			focuspunch: ["7T", "6T", "4M"],
 			foulplay: ["8M", "7T", "6T", "5T"],
+			frostyslash: ["8M", "7M"],
 			frustration: ["7M", "6M", "5M", "4M"],
 			furycutter: ["4T"],
 			furyswipes: ["8L30", "7L16", "6L16", "5L21", "4L21"],

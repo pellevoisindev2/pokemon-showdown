@@ -1659,6 +1659,11 @@ export const MovesText = {
 		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
 		shortDesc: "Always results in a critical hit.",
 	},
+	frostyslash: {
+		name: "Frosty Slash"
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member and lower the opponent's speed by 1. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches after damaging the target. Lowers speed by 1.",
+	},
 	frustration: {
 		name: "Frustration",
 		desc: "Power is equal to the greater of ((255 - user's Happiness) * 2/5), rounded down, or 1.",

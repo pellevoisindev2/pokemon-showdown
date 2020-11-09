@@ -5725,7 +5725,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 40,
 		category: "Physical",
 		name: "Frosty Slash",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onHit(target, source, move) {

@@ -5739,7 +5739,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ice",
 		contestType: "Tough",
-	}
+	},
 	frustration: {
 		num: 218,
 		accuracy: 100,

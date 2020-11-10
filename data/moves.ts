@@ -3868,8 +3868,40 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onModifyType(move, source) {
-			if (move.hit == 1 ) move.type = source.getTypes()[0];
-			if (move.hit == 2 ) move.type = source.getTypes()[1];
+			const c = 0;
+			if (c == 0 ) {
+				switch (source.getTypes()[0]) {
+				case 'Normal':
+					move.type = 'Normal';
+					break;
+				case 'Water':
+					move.type = 'Water';
+					break;
+				case 'Ground':
+					move.type = 'Ground';
+					break;
+				case 'Rock':
+					move.type = 'Rock';
+					break;
+				}
+				c+=1;
+			} 
+			if (c == 1 ) {
+				switch (source.getTypes()[1]) {
+				case 'Normal':
+					move.type = 'Normal';
+					break;
+				case 'Water':
+					move.type = 'Water';
+					break;
+				case 'Ground':
+					move.type = 'Ground';
+					break;
+				case 'Rock':
+					move.type = 'Rock';
+					break;
+				}
+			}
 		},
 		multihit: 2,
 		secondary: null,

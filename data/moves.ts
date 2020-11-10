@@ -3868,7 +3868,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onModifyType(move, source) {
-			if (move.hit === 1 ) {
+			if (move.hit === 0 ) {
 				switch (source.getTypes()[0]) {
 				case 'Normal':
 					move.type = 'Normal';
@@ -3883,7 +3883,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					move.type = 'Rock';
 					break;
 				}
-			} else {
+			} else if (move.hit === 1 ) {
 				switch (source.getTypes()[1]) {
 				case 'Normal':
 					move.type = 'Normal';

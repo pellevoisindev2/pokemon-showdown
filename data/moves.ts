@@ -3863,22 +3863,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 45,
 		basePowerCallback(source, move) {
-			onModifyType(move, source) {
-				switch (source.getTypes()[1]) {
-				case 'Normal':
-					move.type = 'Normal';
-					break;
-				case 'Water':
-					move.type = 'Water';
-					break;
-				case 'Ground':
-					move.type = 'Ground';
-					break;
-				case 'Rock':
-					move.type = 'Rock';
-					break;
-				}
-			},
+			switch (source.getTypes()[1]) {
+			case 'Normal':
+				move.type = 'Normal';
+				break;
+			case 'Water':
+				move.type = 'Water';
+				break;
+			case 'Ground':
+				move.type = 'Ground';
+				break;
+			case 'Rock':
+				move.type = 'Rock';
+				break;
+			}
 		},
 		category: "Physical",
 		name: "Dual Strike",

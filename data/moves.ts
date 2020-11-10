@@ -3863,7 +3863,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 45,
 		basePowerCallback(source, move) {
-			switch (source.getTypes()[0]) {
+			switch (source.getTypes()[1]) {
 			case 'Normal':
 				move.type = 'Normal';
 				break;

@@ -3867,10 +3867,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyType(move, pokemon) {
+			switch (pokemon.getTypes()[0])) {
+			case 'Normal':
+				move.type = 'Normal';
+				break;
+			case 'Water':
+				move.type = 'Water';
+				break;
+			}
+		},
 		multihit: 2,
 		secondary: null,
 		target: "normal",
-		type: source.getTypes[0](),
+		type: "Normal",
 		maxMove: {basePower: 130},
 		contestType: "Tough",
 	},

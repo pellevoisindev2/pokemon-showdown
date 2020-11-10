@@ -11919,7 +11919,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 10,
 			status: 'psn',
 		},
-		ignoreImmunity: {'Steel': true},
+		ignoreImmunity: true,
 		target: "normal",
 		type: "Poison",
 		contestType: "Tough",

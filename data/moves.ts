@@ -4659,7 +4659,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {basePower: 140},
 		maxMove: {basePower: 130},
 		contestType: "Beautiful",
-	}
+	},
 	featherdance: {
 		num: 297,
 		accuracy: 100,

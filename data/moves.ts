@@ -3875,6 +3875,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 			case 'Water':
 				move.type = 'Water';
 				break;
+			case 'Ground':
+				move.type = 'Ground';
+				break;
+			case 'Rock':
+				move.type = 'Rock';
+				break;
 			}
 		},
 		multihit: 2,

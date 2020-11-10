@@ -3308,6 +3308,11 @@ export const MovesText = {
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
 	},
+	nitricstrike: {
+		name: "Nitric Strike",
+		desc: "Has a 10% chance to poison the target. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
+		shortDesc: "10% chance to poison. Super effective on Steel.",
+	},
 	nobleroar: {
 		name: "Noble Roar",
 		desc: "Lowers the target's Attack and Special Attack by 1 stage.",

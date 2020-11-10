@@ -3877,6 +3877,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move.type = 'Rock';
 				break;
 			}
+			return;
 		},
 		category: "Physical",
 		name: "Dual Strike",

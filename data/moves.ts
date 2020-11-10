@@ -3884,7 +3884,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					move.type = 'Rock';
 					break;
 				}
-				c+=1;
+				c= c + 1;
 			} 
 			if (c == 1 ) {
 				switch (source.getTypes()[1]) {

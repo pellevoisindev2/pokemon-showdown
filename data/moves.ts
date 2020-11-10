@@ -3877,6 +3877,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move.type = 'Rock';
 				break;
 			}
+			this.debug(move.type, basePower);
 			return 45, move.type;
 		},
 		category: "Physical",
@@ -3899,6 +3900,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move.type = 'Rock';
 				break;
 			}
+			this.debug(move.type, basePower);
 		},
 		multihit: 2,
 		secondary: null,

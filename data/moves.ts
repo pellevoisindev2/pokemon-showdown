@@ -3868,7 +3868,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onModifyType(move, source) {
-			switch (source.getTypes()[0])) {
+			switch (source.getTypes()[0]) {
 			case 'Normal':
 				move.type = 'Normal';
 				break;

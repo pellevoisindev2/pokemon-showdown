@@ -11922,7 +11922,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ice",
 		contestType: "Tough",
-	}
+	},
 	nobleroar: {
 		num: 568,
 		accuracy: 100,

@@ -3867,38 +3867,46 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		onModifyType(move, source) {
-			switch (source.getTypes()[0]) {
-			case 'Normal':
-				move.type = 'Normal';
-				break;
-			case 'Water':
-				move.type = 'Water';
-				break;
-			case 'Ground':
-				move.type = 'Ground';
-				break;
-			case 'Rock':
-				move.type = 'Rock';
-				break;
-			}
-		},
-		onHit(move, source) {
-			switch (source.getTypes()[1]) {
-			case 'Normal':
-				move.type = 'Normal';
-				break;
-			case 'Water':
-				move.type = 'Water';
-				break;
-			case 'Ground':
-				move.type = 'Ground';
-				break;
-			case 'Rock':
-				move.type = 'Rock';
-				break;
-			}
-		},
+		let hitCount = 0;
+			battle.onEvent('BasePower', battle.format, function (basePower) {
+                if (hitCount == 0) {
+					onModifyType(move, source) {
+						switch (source.getTypes()[0]) {
+						case 'Normal':
+							move.type = 'Normal';
+							break;
+						case 'Water':
+							move.type = 'Water';
+							break;
+						case 'Ground':
+							move.type = 'Ground';
+							break;
+						case 'Rock':
+							move.type = 'Rock';
+							break;
+						}
+					},
+                  hitCount++;
+                };
+                if (hitCount == 1) {
+                  onModifyType(move, source) {
+						switch (source.getTypes()[1]) {
+						case 'Normal':
+							move.type = 'Normal';
+							break;
+						case 'Water':
+							move.type = 'Water';
+							break;
+						case 'Ground':
+							move.type = 'Ground';
+							break;
+						case 'Rock':
+							move.type = 'Rock';
+							break;
+						}
+					},
+                };
+            });
 		multihit: 2,
 		secondary: null,
 		target: "normal",

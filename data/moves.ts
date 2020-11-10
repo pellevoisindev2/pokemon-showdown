@@ -3858,58 +3858,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		maxMove: {basePower: 130},
 		contestType: "Tough",
 	},
-	dualstrike: {
-		num: 829,
-		accuracy: 100,
-		basePower: 45,
-		category: "Physical",
-		name: "Dual Strike",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		onModifyType(move, source) {
-			int c = 0;
-			if (c == 0 ) {
-				switch (source.getTypes()[0]) {
-				case 'Normal':
-					move.type = 'Normal';
-					break;
-				case 'Water':
-					move.type = 'Water';
-					break;
-				case 'Ground':
-					move.type = 'Ground';
-					break;
-				case 'Rock':
-					move.type = 'Rock';
-					break;
-				}
-				c = c + 1;
-			} 
-			if (c == 1 ) {
-				switch (source.getTypes()[1]) {
-				case 'Normal':
-					move.type = 'Normal';
-					break;
-				case 'Water':
-					move.type = 'Water';
-					break;
-				case 'Ground':
-					move.type = 'Ground';
-					break;
-				case 'Rock':
-					move.type = 'Rock';
-					break;
-				}
-			}
-		},
-		multihit: 2,
-		secondary: null,
-		target: "normal",
-		type: "Normal",
-		maxMove: {basePower: 130},
-		contestType: "Tough",
-	},
 	dualwingbeat: {
 		num: 814,
 		accuracy: 90,
@@ -11955,6 +11903,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		contestType: "Cool",
 	},
+	nitricstrike: {
+		num: 830,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Freeze-Dry",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 1;
+		},
+		secondary: {
+			chance: 10,
+			status: 'psn',
+		},
+		target: "normal",
+		type: "Ice",
+		contestType: "Tough",
+	}
 	nobleroar: {
 		num: 568,
 		accuracy: 100,

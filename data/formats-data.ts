@@ -1697,7 +1697,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		randomBattleMoves: ["iceshard", "iciclecrash", "knockoff", "lowkick", "swordsdance"],
 		randomBattleLevel: 82,
 		randomDoubleBattleMoves: ["fakeout", "iceshard", "knockoff", "swordsdance", "tripleaxel"],
-		viableMoves: {"frostyslash":1},
 		randomDoubleBattleLevel: 84,
 		tier: "UU",
 		doublesTier: "(DUU)",

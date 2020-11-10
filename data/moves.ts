@@ -4643,6 +4643,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		contestType: "Cool",
 	},
+	featherbarrage: {
+		num: 828,
+		accuracy: 90,
+		basePower: 25,
+		category: "Physical",
+		name: "Feather Barrage",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		zMove: {basePower: 140},
+		maxMove: {basePower: 130},
+		contestType: "Beautiful",
+	}
 	featherdance: {
 		num: 297,
 		accuracy: 100,
@@ -5722,7 +5739,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	frostyslash: {
 		num: 827,
 		accuracy: 100,
-		basePower: 40,
+		basePower: 30,
 		category: "Physical",
 		name: "Frosty Slash",
 		pp: 10,

@@ -1355,6 +1355,11 @@ export const MovesText = {
 		desc: "Leaves the target with at least 1 HP.",
 		shortDesc: "Always leaves the target with at least 1 HP.",
 	},
+	featherbarrage: {
+		name: "Feather Barrage",
+		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times in one turn.",
+	}
 	featherdance: {
 		name: "Feather Dance",
 		desc: "Lowers the target's Attack by 2 stages.",

@@ -1408,6 +1408,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleteam: ["7M", "7V", "6M", "5M", "4M", "3M"],
 			endure: ["7V", "4M", "3T"],
 			facade: ["8V", "7M", "6M", "5M", "4M", "3M"],
+			featherbarrage: ["8M", "7M"],
 			featherdance: ["7L27", "6L27", "5L27", "4L27", "3L34"],
 			fly: ["8V", "7M", "7V", "6M", "5M", "4M", "3M"],
 			frustration: ["7M", "7V", "6M", "5M", "4M", "3M"],

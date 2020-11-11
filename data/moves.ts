@@ -18938,7 +18938,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 40,
 		category: "Special",
-		name: "Water",
+		name: "Water Bullet",
 		pp: 20,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},

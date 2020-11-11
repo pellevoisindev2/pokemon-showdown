@@ -2600,7 +2600,7 @@ export const MovesText = {
 		name: "Kat Slap",
 		desc: "FORGIVE US, GOD KATTEN, FOR WE HAVE SINNED! HELP US TO ACCEPT RESPONSIBILITY FOR WHAT WE HAVE DONE! HELP US TO REPENT, ASK YOU FORGIVENESS, AND LIVE FAITHFULLY FOR YOU!",
 		shortDesc: "Use at your own risk.",
-	}
+	},
 	kinesis: {
 		name: "Kinesis",
 		desc: "Lowers the target's accuracy by 1 stage.",

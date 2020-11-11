@@ -29908,6 +29908,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			honeclaws: ["6M", "5M"],
 			incinerate: ["6M", "5M"],
 			lastresort: ["8E", "7T", "7E", "6T", "6E", "5T", "5E", "4T", "4E"],
+			lordslap: ["8M", "7M"],
 			lowkick: ["8M", "7T", "7E", "6T", "6E", "5T", "5E"],
 			megakick: ["8M", "3T"],
 			megapunch: ["8M", "3T"],

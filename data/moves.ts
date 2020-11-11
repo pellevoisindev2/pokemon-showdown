@@ -3870,7 +3870,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         onModifyType(move, source) {
             move.type = source.getTypes()[0];
         },
-		onTryHit(target, source, move) {
+		onHit(target, source, move) {
 			if (source.getTypes().length === 1) {
 				move.type = source.getTypes()[0];
 			} else {

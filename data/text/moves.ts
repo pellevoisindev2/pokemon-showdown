@@ -1142,6 +1142,11 @@ export const MovesText = {
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
 		shortDesc: "Hits 2 times in one turn.",
 	},
+	dualstrike: {
+		name: "Dual Strike",
+		desc: "Hits twice. If the pokemon has 2 types, the first hit will have its first type and the second hit its second type. If the pokemon has 1 type, the two hits will have said type.",
+		shortDesc: "Hits 2 times. Each hit has the pokemon types.",
+	},
 	dualwingbeat: {
 		name: "Dual Wingbeat",
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",

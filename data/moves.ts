@@ -3871,7 +3871,11 @@ export const Moves: {[moveid: string]: MoveData} = {
             move.type = source.getTypes()[0];
         },
 		onHit(target, source, move) {
-			move.type = source.getTypes()[1];
+			if (source.getTypes().length === 1) {
+				move.type = source.getTypes()[0];
+			} else {
+				move.type = source.getTypes()[1];
+			}
 		},
         multihit: 2,
         secondary: null,

@@ -3858,6 +3858,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		maxMove: {basePower: 130},
 		contestType: "Tough",
 	},
+	dualstrike: {
+        num: 829,
+        accuracy: 100,
+        basePower: 45,
+        category: "Physical",
+        name: "Dual Strike",
+        pp: 10,
+        priority: 0,
+        flags: {contact: 1, protect: 1, mirror: 1},
+        onModifyType(move, source) {
+            move.type = source.getTypes()[0];
+        },
+		onHit(target, source, move) {
+			move.type = source.getTypes()[1];
+		},
+        multihit: 2,
+        secondary: null,
+        target: "normal",
+        type: "Normal",
+        maxMove: {basePower: 130},
+        contestType: "Tough",
+    },
 	dualwingbeat: {
 		num: 814,
 		accuracy: 90,
@@ -18941,7 +18963,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Water Bullet",
 		pp: 20,
 		priority: 1,
-		flags: {protect: 1, mirror: 1},
+		flags: {bullet: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Water",

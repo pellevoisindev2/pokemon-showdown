@@ -842,6 +842,10 @@ export const MovesText = {
 		shortDesc: "More power the more HP the target has left.",
 		descGen4: "Power is equal to 120 * (target's current HP / target's maximum HP) + 1, rounded down.",
 	},
+	crushingice: {
+		name: "Crush Grip",
+		shortDesc: "Hits adjacent Pokemon.",
+	},
 	curse: {
 		name: "Curse",
 		desc: "If the user is not a Ghost type, lowers the user's Speed by 1 stage and raises the user's Attack and Defense by 1 stage. If the user is a Ghost type, the user loses 1/2 of its maximum HP, rounded down and even if it would cause fainting, in exchange for the target losing 1/4 of its maximum HP, rounded down, at the end of each turn while it is active. If the target uses Baton Pass, the replacement will continue to be affected. Fails if there is no target or if the target is already affected.",

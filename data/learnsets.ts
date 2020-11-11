@@ -27212,6 +27212,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			bulldoze: ["8M", "7M", "6M", "5M"],
 			captivate: ["4M"],
 			confide: ["7M", "6M"],
+			crushingice: ["8M", "7M"],
 			dig: ["8M", "6M", "5M", "4M"],
 			doublehit: ["8L0", "7L33", "6L33", "5L33", "5S0", "4L33"],
 			doubleteam: ["7M", "6M", "5M", "4M"],

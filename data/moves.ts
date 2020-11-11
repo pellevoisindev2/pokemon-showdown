@@ -3884,7 +3884,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 					move.type = 'Rock';
 					break;
 				}
-				count = count + 1;
 			}
 			if (count === 1) {
 				switch (source.getTypes()[1]) {
@@ -3903,6 +3902,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				count = count - 1;
 			}
+			count = count + 1;
         },
         multihit: 2,
         secondary: null,

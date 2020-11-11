@@ -3636,7 +3636,7 @@ export const MovesText = {
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
 	},
-	prehistoricwisdom {
+	prehistoricwisdom: {
 		desc: "Raises the user's Defense and Special Attack by 1 stage.",
 		shortDesc: "Raises the user's Defense and Sp. Atk by 1.",
 	},

@@ -3885,6 +3885,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 					break;
 				}
 			}
+			count = count + 1;
+        },
+		onModifyType(move, source) {
 			if (count === 1) {
 				switch (source.getTypes()[1]) {
 				case 'Normal':
@@ -3900,9 +3903,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					move.type = 'Rock';
 					break;
 				}
-				count = count - 1;
 			}
-			count = count + 1;
         },
         multihit: 2,
         secondary: null,

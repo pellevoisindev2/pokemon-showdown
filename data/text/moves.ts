@@ -5315,7 +5315,7 @@ export const MovesText = {
 		name: "Water Bullet",
 		desc: "No additional effect.",
 		shortDesc: "Usually goes first.",
-	}
+	},
 	waterfall: {
 		name: "Waterfall",
 		desc: "Has a 20% chance to flinch the target.",

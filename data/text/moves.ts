@@ -5311,7 +5311,7 @@ export const MovesText = {
 		shortDesc: "Power doubles if target is asleep, and wakes it.",
 		descGen4: "Power doubles if the target is asleep. If this move is successful, the target wakes up.",
 	},
-	waterbullet {
+	waterbullet: {
 		name: "Water Bullet",
 		desc: "No additional effect.",
 		shortDesc: "Usually goes first.",

@@ -15043,6 +15043,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleteam: ["7M", "6M", "5M", "4M"],
 			dragonpulse: ["8M", "7T", "6T", "5T", "4M"],
 			dragontail: ["7M", "6M", "5M"],
+			dualstrike: ["8M", "7M"],
 			drillrun: ["8M", "8L35", "7T", "7L33", "6T", "6L33", "5T", "5L47"],
 			earthpower: ["8M", "7T", "6T", "5T", "4T"],
 			earthquake: ["8M", "8L47", "7M", "7L48", "6M", "6L48", "5M", "5L62", "4M", "4L49"],

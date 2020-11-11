@@ -12697,6 +12697,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {def: 1}},
 		contestType: "Clever",
 	},
+	poisonhorn: {
+		num: 831,
+		accuracy: 85,
+		basePower: 120,
+		category: "Physical",
+		name: "Poison Horn",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			status: 'psn',
+		},
+		target: "normal",
+		type: "Poison",
+		contestType: "Cool",
+	},
 	poisonjab: {
 		num: 398,
 		accuracy: 100,

@@ -3531,6 +3531,11 @@ export const MovesText = {
 		shortDesc: "Poisons the foe(s).",
 		shortDescGen2: "Poisons the target.",
 	},
+	poisonhorn: {
+		name: "Poison Horn",
+		desc: "Has a 10% chance to poison the target.",
+		shortDesc: "10% chance to poison the target.",
+	},
 	poisonjab: {
 		name: "Poison Jab",
 		desc: "Has a 30% chance to poison the target.",

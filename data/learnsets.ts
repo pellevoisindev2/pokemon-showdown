@@ -51989,6 +51989,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			megahorn: ["8M", "8L74", "7L1", "6L1", "5L1"],
 			payback: ["8M", "7M", "6M", "5M"],
 			pinmissile: ["8M"],
+			poisonhorn: ["8M", "7M"],
 			poisonjab: ["8M", "7M", "6M", "5M"],
 			poisonsting: ["8L1", "7L1", "6L1", "5L1"],
 			poisontail: ["8L12", "7L19", "6L19", "5L19", "5D"],

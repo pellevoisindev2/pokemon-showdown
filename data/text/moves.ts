@@ -3636,6 +3636,10 @@ export const MovesText = {
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
 	},
+	prehistoricwisdom {
+		desc: "Raises the user's Defense and Special Attack by 1 stage.",
+		shortDesc: "Raises the user's Defense and Sp. Atk by 1.",
+	},
 	present: {
 		name: "Present",
 		desc: "If this move is successful, it deals damage or heals the target. 40% chance for 40 power, 30% chance for 80 power, 10% chance for 120 power, and 20% chance to heal the target by 1/4 of its maximum HP, rounded down.",

@@ -23485,6 +23485,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			peck: ["8L1", "7L1", "7V", "6L1", "5L1", "4L1", "3L1"],
 			pluck: ["5M", "4M"],
 			powerswap: ["8M", "8L34", "7L53", "6L53", "5L54", "4L54"],
+			prehistoricwisdom: ["8M", "7M"],
 			protect: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
 			psychic: ["8M", "8L41", "7M", "7L35", "7V", "6M", "6L35", "5M", "5L66", "4M", "4L59", "3M", "3L65"],
 			psychoshift: ["8L28", "7L43", "6L37", "5L37", "4L37"],

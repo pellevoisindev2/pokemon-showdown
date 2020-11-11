@@ -18946,7 +18946,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Water",
 		contestType: "Beautiful",
-	}
+	},
 	waterfall: {
 		num: 127,
 		accuracy: 100,

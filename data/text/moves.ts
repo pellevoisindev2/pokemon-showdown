@@ -955,6 +955,11 @@ export const MovesText = {
 
 		prepare: "[POKEMON] burrowed its way under the ground!",
 	},
+	dirtydeed: {
+		name: "Dirty Deed",
+		desc: "Damage is calculated using the target's Special Attack stat, including stat stage changes. The user's Ability, and item are used as normal.",
+		shortDesc: "Uses target's Sp. Atk stat in damage calculation.",
+	},
 	disable: {
 		name: "Disable",
 		desc: "For 4 turns, the target's last move used becomes disabled. Fails if one of the target's moves is already disabled, if the target has not made a move, if the target no longer knows the move, or if the move was a Max or G-Max Move.",

@@ -12416,6 +12416,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			darkpulse: ["8M", "8L42", "8V", "7M", "7L44", "6M", "6L44", "5T", "5L44", "4M", "4L44"],
 			dazzlinggleam: ["8M", "8V", "7M", "6M"],
 			destinybond: ["8L54", "7L50", "7V", "6L50", "6S3", "5L50", "4L50", "3L39"],
+			dirtydeed: ["8M", "7M"],
 			disable: ["8V"],
 			doubleedge: ["7V", "3T"],
 			doubleteam: ["7M", "7V", "6M", "5M", "4M", "3M"],

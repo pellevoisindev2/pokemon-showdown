@@ -18936,7 +18936,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	waterbullet: {
 		num: 847,
 		accuracy: 100,
-		basePower: 4g0,
+		basePower: 40,
 		category: "Special",
 		name: "Water",
 		pp: 20,

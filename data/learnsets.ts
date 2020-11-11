@@ -48940,6 +48940,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			icebeam: ["7M", "6M", "5M"],
 			icywind: ["7T", "6T", "5T"],
 			irontail: ["7T", "6T", "5T"],
+			katslap: ["8M", "7M"],
 			nightslash: ["7E", "6E", "5E"],
 			protect: ["7M", "6M", "5M"],
 			raindance: ["7M", "6M", "5M"],

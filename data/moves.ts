@@ -14351,8 +14351,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (source?.hasItem('gripclaw')) return 8;
 				return this.random(5, 7);
 			},
-			onStart(pokemon, target, source) {
-				this.add('-start', target, 'Rock Seal');
+			onStart(pokemon, source) {
 				this.add('-activate', pokemon, 'Rock Seal');
 				this.effectData.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
 			},

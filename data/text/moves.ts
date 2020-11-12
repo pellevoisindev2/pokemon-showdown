@@ -3704,6 +3704,11 @@ export const MovesText = {
 		desc: "Lowers the user's Special Attack by 2 stages.",
 		shortDesc: "Lowers the user's Sp. Atk by 2.",
 	},
+	psychocrash: {
+		name: "Psycho Crash",
+		desc: "Has a 10% chance to confuse the target. If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 33% recoil. 10% chance to confuse.",
+	},
 	psychocut: {
 		name: "Psycho Cut",
 		desc: "Has a higher chance for a critical hit.",

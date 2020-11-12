@@ -41702,6 +41702,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: ["8M", "7M", "6M", "5M", "4M", "3M"],
 			psychic: ["8M", "8L42", "7M", "7L20", "6M", "6L20", "5M", "5L20", "5S13", "4M", "4L20", "3M", "3L20", "3S10"],
 			psychup: ["7M", "6M", "5M", "4M", "3T"],
+			psychocrash: ["8M", "7M"],
 			psyshock: ["8M", "7M", "6M", "5M"],
 			raindance: ["8M", "7M", "6M", "5M", "4M", "3M"],
 			recycle: ["7T", "6T", "5T", "4M"],

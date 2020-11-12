@@ -14335,6 +14335,48 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Tough",
 	},
+	rockseal: {
+		num: 849
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Sand Tomb",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'rockseal',
+		condition: {
+            duration: 5,
+			durationCallback(target, source) {
+				if (source?.hasItem('gripclaw')) return 8;
+				return this.random(5, 7);
+			},
+			onStart(pokemon, source) {
+				this.add('-activate', pokemon, 'Rock Seal');
+				this.effectData.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
+			},
+			onResidualOrder: 11,
+			onResidual(pokemon) {
+				const source = this.effectData.source;
+				// G-Max Centiferno and G-Max Sandblast continue even after the user leaves the field
+				if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
+					delete pokemon.volatiles['rockseal'];
+					this.add('-end', pokemon, this.effectData.sourceEffect, '[rockseal]', '[silent]');
+					return;
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, this.effectData.sourceEffect, '[rockseal]');
+			},
+			onTrapPokemon(pokemon) {
+				if (this.effectData.source?.isActive) pokemon.tryTrap();
+			},
+        },
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+		contestType: "Clever",
+	},
 	rockslide: {
 		num: 157,
 		accuracy: 90,

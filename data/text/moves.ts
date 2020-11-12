@@ -3977,6 +3977,11 @@ export const MovesText = {
 		desc: "Raises the user's Speed by 2 stages.",
 		shortDesc: "Raises the user's Speed by 2.",
 	},
+	rockseal: {
+		name: "Rock Seal",
+		desc: "Prevents the target from switching for five turns (seven turns if the user is holding Grip Claw). The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps the target for 5 turns.",
+	},
 	rockslide: {
 		name: "Rock Slide",
 		desc: "Has a 30% chance to flinch the target.",

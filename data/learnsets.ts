@@ -12693,6 +12693,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			rockblast: ["8M"],
 			rockclimb: ["4M"],
 			rockpolish: ["8L1", "7M", "6M", "5M", "4M", "4L30"],
+			rockseal: ["8M", "7M"],
 			rockslide: ["8M", "8L20", "7M", "7L34", "6M", "6L34", "5M", "5L34", "4M", "3T"],
 			rocksmash: ["7V", "6M", "5M", "4M", "3M"],
 			rockthrow: ["8L1", "7L7", "7V", "6L7", "5L9", "4L9", "3L12"],

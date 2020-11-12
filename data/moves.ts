@@ -14352,7 +14352,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return this.random(5, 7);
 			},
 			onStart(pokemon, source) {
-				this.add('-activate', pokemon, 'Rock Seal');
+				this.add('-activate', pokemon, 'move: ' + this.effectData.sourceEffect, '[of] ' + source);
 				this.effectData.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
 			},
 			onResidualOrder: 11,

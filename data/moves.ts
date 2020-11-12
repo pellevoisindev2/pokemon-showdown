@@ -14374,7 +14374,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         },
 		secondary: null,
 		target: "normal",
-		type: "Ground",
+		type: "Rock",
 		contestType: "Clever",
 	},
 	rockslide: {

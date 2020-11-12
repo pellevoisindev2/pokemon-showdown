@@ -14340,7 +14340,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 60,
 		category: "Physical",
-		name: "Sand Tomb",
+		name: "Rock Seal",
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},

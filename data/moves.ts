@@ -14336,7 +14336,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	rockseal: {
-		num: 849
+		num: 849,
 		accuracy: 100,
 		basePower: 60,
 		category: "Physical",

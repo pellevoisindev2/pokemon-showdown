@@ -4,6 +4,11 @@ export const MovesText = {
 		desc: "Has a very high chance for a critical hit.",
 		shortDesc: "Very high critical hit ratio.",
 	},
+	speedstrike: {
+		name: "Electro Ball",
+		desc: "Damage is calculated using the user's Speed stat as its Attack, including stat stage changes. Other effects that modify the Speed stat are used as normal.",
+		shortDesc: "Uses user's Speed stat as Atk in damage calculation.",
+	},
 	absorb: {
 		name: "Absorb",
 		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",

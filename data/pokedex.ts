@@ -10641,7 +10641,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Bisharp",
 		types: ["Dark", "Steel"],
 		baseStats: {hp: 65, atk: 125, def: 100, spa: 60, spd: 70, spe: 70},
-		abilities: {0: "Defiant", 1: "Inner Focus", H: "Shameless Cheater"},
+		abilities: {0: "Defiant", 1: "Inner Focus", H: "Flagrant Cheater"},
 		heightm: 1.6,
 		weightkg: 70,
 		color: "Red",

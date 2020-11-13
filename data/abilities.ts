@@ -2178,7 +2178,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onBasePower(basePower, pokemon, target, move) {
-			if (move.multihitType === 'parentalbond' && move.hit > 1) return this.chainModify(0.25);
+			if ((move.multihitType === 'parentalbond' || move.multihitType === 'shamelesscheater') && move.hit > 1) return this.chainModify(0.25);
 		},
 		rating: 2,
 		num: 152,
@@ -2457,6 +2457,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Parental Bond",
 		rating: 4.5,
 		num: 184,
+	},
+	shamelesscheater: {
+		onPrepareHit(source, target, move) {
+			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
+			if (['iceball', 'rollout'].includes(move.id)) return;
+			if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax && move.type === 'Dark') {
+				move.multihit = 2;
+				move.multihitType = 'shamelesscheater';
+			}
+		},
+		onBasePowerPriority: 7,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.multihitType === 'shamelesscheater' && move.hit > 1) return this.chainModify(0.25);
+		},
+		onSourceModifySecondaries(secondaries, target, source, move) {
+			if (move.multihitType === 'shamelesscheater' && move.id === 'secretpower' && move.hit < 2) {
+				// hack to prevent accidentally suppressing King's Rock/Razor Fang
+				return secondaries.filter(effect => effect.volatileStatus === 'flinch');
+			}
+		},
+		name: "Shameless Cheater",
+		rating: 4.5,
+		num: 999,
 	},
 	pastelveil: {
 		onStart(pokemon) {

@@ -1,4 +1,9 @@
 export const AbilitiesText = {
+	shamelesscheater: {
+		name: "Shameless Cheater",
+		desc: "This Pokemon's Dark damaging moves become multi-hit moves that hit twice. The second hit has its damage quartered. Does not affect multi-hit moves or moves that have multiple targets.",
+		shortDesc: "This Pokemon's Dark damaging moves hit twice. The second hit has its damage quartered.",
+	},
 	noability: {
 		name: "No Ability",
 		shortDesc: "Does nothing.",

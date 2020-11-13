@@ -3897,7 +3897,26 @@ export const Moves: {[moveid: string]: MoveData} = {
         priority: 0,
         flags: {contact: 1, protect: 1, mirror: 1},
         onModifyType(move, source) {
-            move.type = source.getTypes()[0];
+            switch (source.getTypes()[0) {
+			case 'Normal':
+				move.type = 'Normal';
+				break;
+			case 'Water':
+				move.type = 'Water';
+				break;
+			case 'Fire':
+				move.type = 'Fire';
+				break;
+			case 'Grass':
+				move.type = 'Grass';
+				break;
+			case 'Rock':
+				move.type = 'Rock';
+				break;
+			case 'Ground':
+				move.type = 'Ground';
+				break;
+			}
         },
 		onHit(target, source, move) {
 			if (source.getTypes().length === 1) {

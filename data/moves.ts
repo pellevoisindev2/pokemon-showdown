@@ -17102,7 +17102,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				for (const stat of targetBoosts) {
 					targetBoosts[stat] = targetBoosts[stat] * -1;
 				}
-				target.setBoost(null);
 				target.setBoost(targetBoosts);
 			}
 		},

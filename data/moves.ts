@@ -15434,7 +15434,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					}
 				}
 				if (move.flags['contact']) {
-					this.sideCondition('stickyweb', source, target, this.dex.getActiveMove("Cocoon Trap"));
+					this.sideCondition('stickyweb');
 				}
 				return this.NOT_FAIL;
 			},

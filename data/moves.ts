@@ -17091,6 +17091,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePowerCallback(pokemon, target, move) {
 			if (target.positiveBoosts().length != null) {
 				return move.basePower * 2;
+			} else {
+				return;
 			}
 		},
 		category: "Physical",

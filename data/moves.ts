@@ -17098,7 +17098,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, authentic: 1},
 		onHit(target) {
 			target.clearBoosts();
-		}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",

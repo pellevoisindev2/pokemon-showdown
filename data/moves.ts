@@ -17098,9 +17098,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, authentic: 1},
 		onHit(target, source) {
 			const targetBoosts: SparseBoostsTable = {};
-			if (targetBoosts.length === 0) {
+			if (targetBoosts.length !== 0) {
 				for (const stat of targetBoosts) {
-					targetBoosts[stat] = targetBoosts[stat] * -1;
+					if (targetBoosts[stat]>0) {
+						targetBoosts[stat] = targetBoosts[stat] * -1;
+					}
 				}
 				target.setBoost(targetBoosts);
 			}

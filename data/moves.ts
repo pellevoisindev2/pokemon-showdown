@@ -30,7 +30,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	"10000000voltthunderbolt": {
 		num: 719,
 		accuracy: true,
-		basePower: 195,
+		basePower: 190,
 		category: "Special",
 		isNonstandard: "Past",
 		name: "10,000,000 Volt Thunderbolt",

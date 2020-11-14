@@ -58189,7 +58189,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			attract: ["8M", "7M", "6M", "5M"],
 			beatup: ["8M"],
 			brickbreak: ["8M", "7M", "6M", "5M"],
-			penalize: ["8M", "7M"],
+			cocoontrap: ["8M", "7M"],
 			confide: ["7M", "6M"],
 			cut: ["6M", "5M"],
 			darkpulse: ["8M", "7M", "6M", "5T"],

@@ -15393,6 +15393,61 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		contestType: "Tough",
 	},
+	cocoontrap: {
+		num: 985,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Cocoon Trap",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'cocoontrap',
+		onTryHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect'] || move.category === 'Status') {
+					if (move.isZ || (move.isMax && !move.breaksProtect)) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (move.flags['contact']) {
+					this.sideCondition({'stickyweb'}, source, target, this.dex.getActiveMove("Cocoon Trap"));
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && move.flags['contact']) {
+					this.sideCondition({'stickyweb'}, source, target, this.dex.getActiveMove("Cocoon Trap"));
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Bug",
+	},
 	shiftgear: {
 		num: 508,
 		accuracy: true,
@@ -17083,28 +17138,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Rock",
 		contestType: "Tough",
-	},
-	penalize: {
-		num: 900,
-		accuracy: 100,
-		basePower: 40,
-		basePowerCallback(pokemon, target, move) {
-			if (target.positiveBoosts()>0) {
-				this.hint(target.positiveBoosts());
-				return move.basePower * 2;
-			} else {
-				return move.basePower;
-			}
-		},
-		category: "Physical",
-		name: "Penalize",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
-		target: "normal",
-		type: "Dark",
-		contestType: "Clever",
 	},
 	storedpower: {
 		num: 500,

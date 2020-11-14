@@ -9,10 +9,10 @@ export const MovesText = {
 		desc: "Damage is calculated using the user's Speed stat as its Attack, including stat stage changes. Other effects that modify the Speed stat are used as normal.",
 		shortDesc: "Uses user's Speed stat as Atk in damage calculation.",
 	},
-	penalize: {
-		name: "Penalize",
-		desc: "Power doubles if the target is boosted by at least one stat.",
-		shortDesc: "Power doubles if target is boosted.",
+	cocoontrap: {
+		name: "Cocoon Trap",
+		desc: "If hit by a physical move, adds Sticky Web and lowers speed by 1.",
+		shortDesc: "On contact: Sticky Web and -1 Speed.",
 	},
 	absorb: {
 		name: "Absorb",

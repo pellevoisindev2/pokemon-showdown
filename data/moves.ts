@@ -17089,10 +17089,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 40,
 		basePowerCallback(pokemon, target, move) {
-			if (target.positiveBoosts().length != null) {
+			if (target.positiveBoosts()>0) {
 				return move.basePower * 2;
 			} else {
-				return;
+				return move.basePower;
 			}
 		},
 		category: "Physical",

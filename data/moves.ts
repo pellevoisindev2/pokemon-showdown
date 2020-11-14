@@ -12140,13 +12140,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 					}
 				}
 				if (move.flags['contact']) {
-					this.sideCondition({'stickyweb'});
+					target.sideCondition('stickyweb');
 				}
 				return this.NOT_FAIL;
 			},
 			onHit(target, source, move) {
 				if (move.isZOrMaxPowered && move.flags['contact']) {
-					this.sideCondition({'stickyweb'});
+					target.sideCondition('stickyweb');
 				}
 			},
 		},

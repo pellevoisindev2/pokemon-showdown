@@ -17097,10 +17097,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, authentic: 1},
 		onHit(target) {
-			this.add('-clearallboost');
-			for (const target of this.getAllActive()) {
-				target.clearBoosts();
-			}
+			target.clearBoosts();
+			this.add('-clearboost', target);
 		},
 		secondary: null,
 		target: "normal",

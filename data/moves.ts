@@ -17090,6 +17090,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 40,
 		basePowerCallback(pokemon, target, move) {
 			if (target.positiveBoosts()>0) {
+				this.hint(target.positiveBoosts());
 				return move.basePower * 2;
 			} else {
 				return move.basePower;

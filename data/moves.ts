@@ -17096,15 +17096,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, authentic: 1},
-		onHit(target, source) {
-			const targetBoosts: SparseBoostsTable = {};
-			if (targetBoosts.length !== 0) {
-				for (const stat of targetBoosts) {
-					if (targetBoosts[stat]>0) {
-						targetBoosts[stat] = targetBoosts[stat] * -1;
-					}
-				}
-				target.setBoost(targetBoosts);
+		onHitField() {
+			this.add('-clearallboost');
+			for (const pokemon of this.getAllActive()) {
+				pokemon.clearBoosts();
 			}
 		},
 		secondary: null,

@@ -9,10 +9,10 @@ export const MovesText = {
 		desc: "Damage is calculated using the user's Speed stat as its Attack, including stat stage changes. Other effects that modify the Speed stat are used as normal.",
 		shortDesc: "Uses user's Speed stat as Atk in damage calculation.",
 	},
-	clumsiness: {
-		name: "Clumsiness",
-		desc: "Power is equal to 20+(X*20), where X is the target's total stat stage changes that are greater than 0. Swaps the stat stages of the Pokemon",
-		shortDesc: "+20 power per target's boosts. Swaps stats."
+	penalize: {
+		name: "Penalize",
+		desc: "Power doubles if the target is boosted by at least one stat.",
+		shortDesc: "Power doubles if target is boosted.",
 	},
 	absorb: {
 		name: "Absorb",

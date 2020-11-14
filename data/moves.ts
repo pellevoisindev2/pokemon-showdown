@@ -17084,26 +17084,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 		contestType: "Tough",
 	},
-	clumsiness: {
-		num: 500,
+	penalize: {
+		num: 900,
 		accuracy: 100,
-		basePower: 20,
+		basePower: 40,
 		basePowerCallback(pokemon, target, move) {
-			return move.basePower + 20 * target.positiveBoosts();
+			if (target.positiveBoosts().length != null) {
+				return move.basePower * 2;
+			}
 		},
 		category: "Physical",
-		name: "Clumsiness",
+		name: "Penalize",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, authentic: 1},
-		onHit(target) {
-			target.clearBoosts();
-			this.add('-clearboost', target);
-		},
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
-		maxMove: {basePower: 130},
 		contestType: "Clever",
 	},
 	storedpower: {

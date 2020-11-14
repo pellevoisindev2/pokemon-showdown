@@ -5,9 +5,14 @@ export const MovesText = {
 		shortDesc: "Very high critical hit ratio.",
 	},
 	speedstrike: {
-		name: "Electro Ball",
+		name: "Speed Strike",
 		desc: "Damage is calculated using the user's Speed stat as its Attack, including stat stage changes. Other effects that modify the Speed stat are used as normal.",
 		shortDesc: "Uses user's Speed stat as Atk in damage calculation.",
+	},
+	clumsiness: {
+		name: "Clumsiness",
+		desc: "Power is equal to 20+(X*20), where X is the target's total stat stage changes that are greater than 0. Swaps the stat stages of the Pokemon",
+		shortDesc: "+20 power per target's boosts. Swaps stats."
 	},
 	absorb: {
 		name: "Absorb",

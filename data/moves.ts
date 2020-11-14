@@ -17084,6 +17084,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 		contestType: "Tough",
 	},
+	clumsiness: {
+		num: 500,
+		accuracy: 100,
+		basePower: 20,
+		basePowerCallback(pokemon, target, move) {
+			return move.basePower + 20 * target.positiveBoosts();
+		},
+		category: "Physical",
+		name: "Clumsiness",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, authentic: 1},
+		onHit(target, source) {
+			const targetBoosts: SparseBoostsTable = {};
+			for (const stat of targetBoosts) {
+				targetBoosts[stat] = target.boosts[stat] * -1;
+			}
+			target.setBoost(null);
+			target.setBoost(targetBoosts);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		maxMove: {basePower: 130},
+		contestType: "Clever",
+	},
 	storedpower: {
 		num: 500,
 		accuracy: 100,

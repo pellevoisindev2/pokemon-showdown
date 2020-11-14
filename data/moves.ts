@@ -17096,10 +17096,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, authentic: 1},
-		onHit(pokemon) {
+		onHit(target) {
 			this.add('-clearallboost');
-			for (const pokemon of this.getAllActive()) {
-				pokemon.clearBoosts();
+			for (const target of this.getAllActive()) {
+				target.clearBoosts();
 			}
 		},
 		secondary: null,

@@ -12201,14 +12201,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 					}
 				}
 				if (move.flags['contact']) {
-					this.boost({spe: -1});
+					this.boost({spe: -1}, target);
 					this.useMove("stickyweb", pokemon);
 				}
 				return this.NOT_FAIL;
 			},
 			onHit(target, source, move) {
 				if (move.isZOrMaxPowered && move.flags['contact']) {
-					this.boost({spe: -1});
+					this.boost({spe: -1}, target);
 					this.useMove("stickyweb", pokemon);
 				}
 			},

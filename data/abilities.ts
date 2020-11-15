@@ -44,7 +44,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.useMove("encore", pokemon);
 		},
 		condition: {
-			duration: 1
+			duration: 1,
 		},
 	}
 		name: "Time Reverse",

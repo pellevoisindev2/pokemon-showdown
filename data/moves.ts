@@ -12162,7 +12162,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	cocoontrap: {
-		num: 985,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -12175,11 +12174,45 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onTryHit(pokemon) {
 			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 		},
-		onHit(target, source, move) {
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect'] || move.category === 'Status') {
+					if (move.isZ || (move.isMax && !move.breaksProtect)) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (move.flags['contact']) {
+					this.boost({spe: -1});
+					this.useMove("stickyweb", pokemon);
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
 				if (move.isZOrMaxPowered && move.flags['contact']) {
-					target.addSideCondition('stickyweb', source, this.effect);
+					this.boost({spe: -1});
+					this.useMove("stickyweb", pokemon);
 				}
 			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Bug",

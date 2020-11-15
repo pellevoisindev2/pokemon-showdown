@@ -4328,7 +4328,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	lazyencore: {
-		num: 227,
+		num: 985,
 		accuracy: 100,
 		basePower: 0,
 		category: "Status",
@@ -4336,7 +4336,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, authentic: 1},
-		volatileStatus: 'encore',
+		volatileStatus: 'lazyencore',
 		condition: {
 			duration: 1,
 			noCopy: true, // doesn't get copied by Z-Baton Pass
@@ -4367,7 +4367,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (target.moves.includes(this.effectData.move) &&
 					target.moveSlots[target.moves.indexOf(this.effectData.move)].pp <= 0) {
 					// early termination if you run out of PP
-					target.removeVolatile('encore');
+					target.removeVolatile('lazyencore');
 				}
 			},
 			onEnd(target) {

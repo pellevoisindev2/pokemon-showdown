@@ -41,10 +41,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	timereverse: {
 		onStart(pokemon) {
-			this.useMove("lazyencore");
+			this.useMove("lazyencore", pokemon);
 		},
 		name: "Time Reverse",
-		rating: 3,
+		rating: 2,
 		num: 6586,
 	},
 	adaptability: {

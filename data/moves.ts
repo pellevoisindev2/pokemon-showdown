@@ -12170,7 +12170,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 4,
 		flags: {},
 		stallingMove: true,
-		volatileStatus: 'obstruct',
+		volatileStatus: 'cocoontrap',
 		onTryHit(pokemon) {
 			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 		},

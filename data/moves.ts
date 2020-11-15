@@ -12170,6 +12170,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 4,
 		flags: {},
 		stallingMove: true,
+		volatileStatus: 'cocoontrap',
 		onTryHit(pokemon) {
 			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 		},
@@ -12201,14 +12202,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				if (move.flags['contact']) {
 					this.boost({spe: -1}, source);
-					this.useMove("stickyweb", pokemon);
+					this.useMove('stickyweb', target);
 				}
 				return this.NOT_FAIL;
 			},
 			onHit(target, source, move) {
 				if (move.isZOrMaxPowered && move.flags['contact']) {
 					this.boost({spe: -1}, source);
-					this.useMove("stickyweb", pokemon);
+					this.useMove('stickyweb', target);
 				}
 			},
 		},

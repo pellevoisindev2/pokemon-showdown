@@ -46,7 +46,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		condition: {
 			duration: 1,
 		},
-	}
 		name: "Time Reverse",
 		rating: 2,
 		num: 6586,

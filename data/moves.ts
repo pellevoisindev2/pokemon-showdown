@@ -53,8 +53,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		onHit(target) {
-			switch (random(0,4)) {
+		onHit(target, source, pokemon) {
+			switch (this.random(0,4)) {
 			case '0':
 				move.boosts = {atk: -1};
 				break;

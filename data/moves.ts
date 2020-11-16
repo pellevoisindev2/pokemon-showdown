@@ -20259,7 +20259,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			else {
 				pokemon.addVolatile('confusion');
-				source.trySetStatus('brn', pokemon);
+				pokemon.trySetStatus('brn', pokemon);
 				return;
 			}
 		},

@@ -17409,8 +17409,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			blownkiss: ["8M", "7M"],
 			toxiclove: ["8M", "7M"],
 			thinkfast: ["8M", "7M"],
-			freezingkiss: ["8M", "7M"],
-			psykiss: ["8M", "7M"],
 		},
 		encounters: [
 			{generation: 1, level: 15},
@@ -20340,8 +20338,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			chillingwave: ["8M", "7M"],
 			diamonddust: ["8M", "7M"],
 			featherbarrage: ["8M", "7M"],
-			chillingwave: ["8M", "7M"],
-			diamonddust: ["8M", "7M"],
 			crystalwave: ["8M", "7M"],
 			anticyclone: ["8M", "7M"],
 			windblast: ["8M", "7M"],

@@ -4,16 +4,6 @@ export const MovesText = {
 		desc: "Has a very high chance for a critical hit.",
 		shortDesc: "Very high critical hit ratio.",
 	},
-	speedstrike: {
-		name: "Speed Strike",
-		desc: "Damage is calculated using the user's Speed stat as its Attack, including stat stage changes. Other effects that modify the Speed stat are used as normal.",
-		shortDesc: "Uses user's Speed stat as Atk in damage calculation.",
-	},
-	cocoontrap: {
-		name: "Cocoon Trap",
-		desc: "If hit by a physical move, adds Sticky Web and lowers speed by 1.",
-		shortDesc: "On contact: Sticky Web and -1 Speed.",
-	},
 	absorb: {
 		name: "Absorb",
 		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
@@ -852,10 +842,6 @@ export const MovesText = {
 		shortDesc: "More power the more HP the target has left.",
 		descGen4: "Power is equal to 120 * (target's current HP / target's maximum HP) + 1, rounded down.",
 	},
-	crushingice: {
-		name: "Crush Grip",
-		shortDesc: "Hits adjacent Pokemon.",
-	},
 	curse: {
 		name: "Curse",
 		desc: "If the user is not a Ghost type, lowers the user's Speed by 1 stage and raises the user's Attack and Defense by 1 stage. If the user is a Ghost type, the user loses 1/2 of its maximum HP, rounded down and even if it would cause fainting, in exchange for the target losing 1/4 of its maximum HP, rounded down, at the end of each turn while it is active. If the target uses Baton Pass, the replacement will continue to be affected. Fails if there is no target or if the target is already affected.",
@@ -964,11 +950,6 @@ export const MovesText = {
 		descGen1: "This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks other than Bide, Swift, and Transform. If the user is fully paralyzed on the second turn, it continues avoiding attacks until it switches out or successfully executes the second turn of this move or Fly.",
 
 		prepare: "[POKEMON] burrowed its way under the ground!",
-	},
-	dirtydeed: {
-		name: "Dirty Deed",
-		desc: "Damage is calculated using the target's Special Attack stat, including stat stage changes. The user's Ability, and item are used as normal.",
-		shortDesc: "Uses target's Sp. Atk stat in damage calculation.",
 	},
 	disable: {
 		name: "Disable",
@@ -1160,11 +1141,6 @@ export const MovesText = {
 		name: "Dual Chop",
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
 		shortDesc: "Hits 2 times in one turn.",
-	},
-	dualstrike: {
-		name: "Dual Strike",
-		desc: "Hits twice. If the pokemon has 2 types, the first hit will have its first type and the second hit its second type. If the pokemon has 1 type, the two hits will have said type.",
-		shortDesc: "Hits 2 times. Each hit has the pokemon types.",
 	},
 	dualwingbeat: {
 		name: "Dual Wingbeat",
@@ -1378,11 +1354,6 @@ export const MovesText = {
 		name: "False Swipe",
 		desc: "Leaves the target with at least 1 HP.",
 		shortDesc: "Always leaves the target with at least 1 HP.",
-	},
-	featherbarrage: {
-		name: "Feather Barrage",
-		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
-		shortDesc: "Hits 2-5 times in one turn.",
 	},
 	featherdance: {
 		name: "Feather Dance",
@@ -1687,11 +1658,6 @@ export const MovesText = {
 		name: "Frost Breath",
 		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
 		shortDesc: "Always results in a critical hit.",
-	},
-	frostyslash: {
-		name: "Frosty Slash",
-		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member and lower the opponent's speed by 1. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
-		shortDesc: "On damage: -1 Speed. User switches out",
 	},
 	frustration: {
 		name: "Frustration",
@@ -2611,11 +2577,6 @@ export const MovesText = {
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
 	},
-	katslap: {
-		name: "Kat Slap",
-		desc: "FORGIVE US, GOD KATTEN, FOR WE HAVE SINNED! HELP US TO ACCEPT RESPONSIBILITY FOR WHAT WE HAVE DONE! HELP US TO REPENT, ASK YOU FORGIVENESS, AND LIVE FAITHFULLY FOR YOU!",
-		shortDesc: "Use at your own risk.",
-	},
 	kinesis: {
 		name: "Kinesis",
 		desc: "Lowers the target's accuracy by 1 stage.",
@@ -3337,11 +3298,6 @@ export const MovesText = {
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
 	},
-	nitricstrike: {
-		name: "Nitric Strike",
-		desc: "Has a 10% chance to poison the target. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
-		shortDesc: "10% chance to poison. Super effective on Steel.",
-	},
 	nobleroar: {
 		name: "Noble Roar",
 		desc: "Lowers the target's Attack and Special Attack by 1 stage.",
@@ -3551,11 +3507,6 @@ export const MovesText = {
 		shortDesc: "Poisons the foe(s).",
 		shortDescGen2: "Poisons the target.",
 	},
-	poisonhorn: {
-		name: "Poison Horn",
-		desc: "Has a 10% chance to poison the target.",
-		shortDesc: "10% chance to poison the target.",
-	},
 	poisonjab: {
 		name: "Poison Jab",
 		desc: "Has a 30% chance to poison the target.",
@@ -3651,10 +3602,6 @@ export const MovesText = {
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
 	},
-	prehistoricwisdom: {
-		desc: "Raises the user's Defense and Special Attack by 1 stage.",
-		shortDesc: "Raises the user's Defense and Sp. Atk by 1.",
-	},
 	present: {
 		name: "Present",
 		desc: "If this move is successful, it deals damage or heals the target. 40% chance for 40 power, 30% chance for 80 power, 10% chance for 120 power, and 20% chance to heal the target by 1/4 of its maximum HP, rounded down.",
@@ -3713,11 +3660,6 @@ export const MovesText = {
 		name: "Psycho Boost",
 		desc: "Lowers the user's Special Attack by 2 stages.",
 		shortDesc: "Lowers the user's Sp. Atk by 2.",
-	},
-	psychocrash: {
-		name: "Psycho Crash",
-		desc: "Has a 10% chance to confuse the target. If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
-		shortDesc: "Has 33% recoil. 10% chance to confuse.",
 	},
 	psychocut: {
 		name: "Psycho Cut",
@@ -3991,11 +3933,6 @@ export const MovesText = {
 		name: "Rock Polish",
 		desc: "Raises the user's Speed by 2 stages.",
 		shortDesc: "Raises the user's Speed by 2.",
-	},
-	rockseal: {
-		name: "Rock Seal",
-		desc: "Prevents the target from switching for five turns (seven turns if the user is holding Grip Claw). The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
-		shortDesc: "Traps the target for 5 turns.",
 	},
 	rockslide: {
 		name: "Rock Slide",
@@ -5358,11 +5295,6 @@ export const MovesText = {
 		desc: "Power doubles if the target is asleep. If the user has not fainted, the target wakes up.",
 		shortDesc: "Power doubles if target is asleep, and wakes it.",
 		descGen4: "Power doubles if the target is asleep. If this move is successful, the target wakes up.",
-	},
-	waterbullet: {
-		name: "Water Bullet",
-		desc: "No additional effect.",
-		shortDesc: "Usually goes first.",
 	},
 	waterfall: {
 		name: "Waterfall",

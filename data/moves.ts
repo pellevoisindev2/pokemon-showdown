@@ -44,6 +44,40 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Cool",
 	},
+	manipulation: {
+		num: 945,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Manipulation",
+		pp: 20,
+		priority: 1,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target) {
+			const rand = randomChance(0, 4);
+			switch (rand) {
+			case '0':
+				move.boosts = {atk: -1};
+				break;
+			case '1':
+				move.boosts = {def: -1};
+				break;
+			case '2':
+				move.boosts = {spa: -1};
+				break;
+			case '3':
+				move.boosts = {spd: -1};
+				break;
+			case '4':
+				move.boosts = {spe: -1};
+				break;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		contestType: "Clever",
+	},
 	absorb: {
 		num: 71,
 		accuracy: 100,
@@ -12160,62 +12194,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "any",
 		type: "Flying",
 		contestType: "Cool",
-	},
-	cocoontrap: {
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Cocoon Trap",
-		pp: 10,
-		priority: 4,
-		flags: {},
-		stallingMove: true,
-		volatileStatus: 'cocoontrap',
-		onTryHit(pokemon) {
-			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
-		},
-		onHit(pokemon) {
-			pokemon.addVolatile('stall');
-		},
-		condition: {
-			duration: 1,
-			onStart(target) {
-				this.add('-singleturn', target, 'Protect');
-			},
-			onTryHitPriority: 3,
-			onTryHit(target, source, move) {
-				if (!move.flags['protect'] || move.category === 'Status') {
-					if (move.isZ || (move.isMax && !move.breaksProtect)) target.getMoveHitData(move).zBrokeProtect = true;
-					return;
-				}
-				if (move.smartTarget) {
-					move.smartTarget = false;
-				} else {
-					this.add('-activate', target, 'move: Protect');
-				}
-				const lockedmove = source.getVolatile('lockedmove');
-				if (lockedmove) {
-					// Outrage counter is reset
-					if (source.volatiles['lockedmove'].duration === 2) {
-						delete source.volatiles['lockedmove'];
-					}
-				}
-				if (move.flags['contact']) {
-					this.boost({spe: -1}, source);
-					this.useMove('stickyweb', target);
-				}
-				return this.NOT_FAIL;
-			},
-			onHit(target, source, move) {
-				if (move.isZOrMaxPowered && move.flags['contact']) {
-					this.boost({spe: -1}, source);
-					this.useMove('stickyweb', target);
-				}
-			},
-		},
-		secondary: null,
-		target: "self",
-		type: "Bug",
 	},
 	obstruct: {
 		num: 792,

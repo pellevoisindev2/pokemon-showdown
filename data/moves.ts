@@ -54,7 +54,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
-			chance: 100
+			chance: 100,
 			onHit(target, source) {
 				const result = this.random(5);
 				if ( result === 0 ) {

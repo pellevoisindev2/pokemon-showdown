@@ -20250,6 +20250,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+		onTryHit(pokemon) {
+			const type1 = pokemon.types[0];
+			const type2 = pokemon.types[1];
+			if (type1 === 'Fire' || type2 === 'Fire') {
+				pokemon.addVolatile('confusion');
+				//return;
+			}
+			return false;
+		},
 		status: 'brn',
 		volatileStatus: 'confusion',
 		secondary: null,

@@ -20263,8 +20263,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return;
 			}
 		},
-		status: 'brn',
-		volatileStatus: 'confusion',
 		secondary: null,
 		target: "normal",
 		type: "Grass",

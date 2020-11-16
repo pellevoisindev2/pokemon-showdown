@@ -20255,7 +20255,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			const type2 = pokemon.types[1];
 			if (type1 === 'Fire' || type2 === 'Fire') {
 				pokemon.addVolatile('confusion');
-				//return;
+				return;
 			}
 			return false;
 		},

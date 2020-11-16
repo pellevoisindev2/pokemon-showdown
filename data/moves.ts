@@ -20501,4 +20501,37 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		contestType: "Cool",
 	},
+	sleepbubble: {
+		num: 889,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sleep Bubble",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'yawn',
+		onTryHit(target) {
+			if (target.status || !target.runStatusImmunity('slp')) {
+				return false;
+			}
+		},
+		condition: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			duration: 2,
+			onStart(target, source) {
+				this.add('-start', target, 'move: Yawn', '[of] ' + source);
+			},
+			onResidualOrder: 19,
+			onEnd(target) {
+				this.add('-end', target, 'move: Yawn', '[silent]');
+				target.trySetStatus('slp', this.effectData.source);
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		zMove: {boost: {spe: 1}},
+		contestType: "Cute",
+	},
 };

@@ -53,26 +53,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		onHit(target) {
-			switch (this.random(0,4)) {
-			case '0':
-				move.boost = {atk: -1};
-				break;
-			case '1':
-				move.boost = {def: -1};
-				break;
-			case '2':
-				move.boost = {spa: -1};
-				break;
-			case '3':
-				move.boost = {spd: -1};
-				break;
-			case '4':
-				move.boost = {spe: -1};
-				break;
-			}
+		secondary: {
+			chance: 100
+			onHit(target, source) {
+				const result = this.random(5);
+				if ( result === 0 ) {
+					this.boost({atk: -1}, target)
+				} else if ( result === 1 ) {
+					this.boost({def: -1}, target)
+				} else if ( result === 1 ) {
+					this.boost({spa: -1}, target)
+				} else if ( result === 1 ) {
+					this.boost({spd: -1}, target)
+				} else if ( result === 1 ) {
+					this.boost({spe: -1}, target)
+				}
+			},
 		},
-		secondary: null,
 		target: "normal",
 		type: "Dark",
 		contestType: "Clever",

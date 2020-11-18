@@ -4556,7 +4556,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	kickerboost: {
         onBasePowerPriority: 23,
         onBasePower(basePower, attacker, defender, move) {
-            if if (move.flags['kick']) {
+            if (move.flags['kick']) {
                 this.debug('Kicker Booost boost');
                 return this.chainModify([0x1333, 0x1000]);
             }

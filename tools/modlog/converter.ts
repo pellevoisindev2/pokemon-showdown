@@ -8,8 +8,8 @@
 if (!global.Config) {
 	global.Config = {
 		nofswriting: false,
-		usesqlitemodlog: true,
-		usesqlite: true,
+		usesqlitemodlog: false,
+		usesqlite: false,
 	};
 }
 
@@ -18,7 +18,7 @@ import {FS} from '../../lib/fs';
 import {Modlog, ModlogEntry} from '../../server/modlog';
 import {IPTools} from '../../server/ip-tools';
 
-const Database = Config.usesqlite ? require('better-sqlite3') : null;
+//const Database = Config.usesqlite ? require('better-sqlite3') : null;
 
 type ModlogFormat = 'txt' | 'sqlite';
 

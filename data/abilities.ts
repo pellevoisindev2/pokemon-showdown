@@ -4519,4 +4519,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         rating: 2,
         num: 1006,
     },
+	laststand: {
+        onAfterMoveSecondary(target, source, move) {
+            if (!source || source === target || !target.hp || !move.totalDamage) return;
+            const lastAttackedBy = target.getLastAttackedBy();
+            if (!lastAttackedBy) return;
+            const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
+            if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
+                this.boost({spe: 1});
+            }
+        },
+        name: "Last Stand",
+        rating: 4,
+        num: 1007,
+    },
+	sunbathe: {
+        onWeather(target, source, effect) {
+            if (target.hasItem('utilityumbrella')) return;
+            if (effect.id === 'sunnyday' || effect.id === 'desolateland') {
+                this.heal(target.baseMaxhp / 16);
+            }
+        },
+        name: "Sunbathe",
+        rating: 1.5,
+        num: 1008,
+    },
 };

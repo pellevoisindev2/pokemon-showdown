@@ -7782,7 +7782,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {0: "Sand Stream", 1: "Sunbathe", H: "Sand Force"},
 		heightm: 0.8,
 		weightkg: 49.5,
-		color: "Brown",
+		color: "Yellow",
 		evos: ["Hippowdon"],
 		eggGroups: ["Field"],
 	},

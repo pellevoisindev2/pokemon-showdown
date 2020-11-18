@@ -24,6 +24,7 @@ reflectable: Bounced back to the original user by Magic Coat or the Magic Bounce
 snatch: Can be stolen from the original user and instead used by another Pokemon using Snatch.
 sound: Has no effect on Pokemon with the Soundproof Ability.
 kiss: Power is multiplied by 1.5 when used by a Pokemon with the Lovely Lips Ability.
+slap: Power is multiplied by 1.5 when used by a Pokemon with the Slapper Ability.
 
 */
 

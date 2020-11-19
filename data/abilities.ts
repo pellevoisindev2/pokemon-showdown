@@ -2514,6 +2514,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	pastelveil: {
 		onStart(pokemon) {
+			this.add('-activate', source, 'ability: Pastel Veil');
 			const side = pokemon.side;
 			for (const ally of side.pokemon) {
 				if (['psn', 'tox'].includes(ally.status)) {

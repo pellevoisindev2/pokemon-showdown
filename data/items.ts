@@ -7198,4 +7198,19 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 10003,
 		gen: 8,
 	},
+	rechargeherb: {
+		name: "Recharge Herb",
+		spritenum: 535,
+		fling: {
+			basePower: 30,
+		},
+		onAfterMoveSecondarySelf(target, source, move) {
+			if (move.flags['recharge']) {
+				target.removeVolatile('mustrecharge');
+				target.useItem();
+			}
+		},
+		num: 10004,
+		gen: 8,
+	},
 };

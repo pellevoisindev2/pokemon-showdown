@@ -50938,8 +50938,8 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			worryseed: ["7T", "6T", "5T"],
 			yawn: ["8L1"],
 			zenheadbutt: ["8M", "8L1", "7T", "6T", "5T"],
-			darkpulse: ["8M", "7M"];
-			focusblast: ["8M", "7M"];
+			darkpulse: ["8M", "7M"],
+			focusblast: ["8M", "7M"],
 		},
 		eventData: [
 			{generation: 5, level: 50, isHidden: true, moves: ["defensecurl", "luckychant", "psybeam", "hypnosis"]},

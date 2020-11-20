@@ -503,6 +503,8 @@ export const Scripts: BattleScriptsData = {
 					console.log("accuracy before boost: "+accuracy);
 					accuracy *= 1.3;
 					console.log("accuracy after boost: "+accuracy);
+					accuracy = this.runEvent('ModifyAccuracy', target, pokemon, move, accuracy);
+					this.debug('blunderpolicy - enhancing accuracy');
 				}
 				hitResults[i] = false;
 				continue;

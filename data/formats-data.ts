@@ -134,7 +134,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	raticate: {
 		tier: "PU",
 	},
-	raticatealola{
+	raticatealola: {
 		tier: "PU",
 	},
 	raticatealolatotem: {

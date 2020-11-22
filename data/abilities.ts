@@ -4744,7 +4744,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	forestembrace: {
 		onStart(pokemon) {
 			if (!pokemon.setType('Grass')) return false;
-				this.add('-start', pokemon, 'typechange', type, '[from] ability: Forest Embrace');
+				this.add('-start', pokemon, 'typechange', 'Grass', '[from] ability: Forest Embrace');
 		},
 		name: "Forest Embrace",
 		rating: 0,

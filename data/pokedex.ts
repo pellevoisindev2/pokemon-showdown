@@ -3664,7 +3664,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Sudowoodo",
 		types: ["Rock"],
 		baseStats: {hp: 70, atk: 100, def: 115, spa: 30, spd: 65, spe: 30},
-		abilities: {0: "Sturdy", 1: "Rock Head", H: "Forest Embrace"},
+		abilities: {0: "Sturdy", 1: "Rock Head", H: "Rattled"},
 		heightm: 1.2,
 		weightkg: 38,
 		color: "Brown",

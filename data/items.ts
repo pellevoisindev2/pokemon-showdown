@@ -7232,4 +7232,13 @@ export const Items: {[itemid: string]: ItemData} = {
         num: 10005,
         gen: 8,
     },
+	bagofcaltrops: {
+        name: "Bag of Caltrops",
+        spritenum: 2,
+        onFaint(pokemon, target, move) {
+            target.side.addSideCondition('spikes');
+        },
+        num: 10006,
+        gen: 8,
+    },
 };

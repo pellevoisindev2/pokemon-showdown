@@ -20743,23 +20743,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', pokemon, 'Astro Shift');
 			},
 			onAfterEachBoost(boost, target, source, effect) {
-			if (!source || target.side === source.side) {
-				return;
-			}
-			let statsLowered = false;
-			let i: BoostName;
-				if (boost['spe']! < 0) {
-					speedLowered = true;
+				if (!source || target.side === source.side) {
+					return;
 				}
-			if (speedLowered) {
-				//this.add('-ability', target, 'Defiant');
-				this.boost({spd: 2}, target, target, null, true);
-			}
-		},
+				let statsLowered = false;
+				let i: BoostName;
+					if (boost['spe']! < 0) {
+						speedLowered = true;
+					}
+				if (speedLowered) {
+					//this.add('-ability', target, 'Defiant');
+					this.boost({spd: 2}, target, target, null, true);
+				}
+			},
 		secondary: null,
 		target: "self",
 		type: "Water",
 		zMove: {boost: {def: 1}},
 		contestType: "Beautiful",
+		},
 	},
 };

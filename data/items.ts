@@ -7247,7 +7247,7 @@ export const Items: {[itemid: string]: ItemData} = {
         onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
 			if (!target.hp) {
-				this.useMove("spikes",source);
+				this.useMove("spikes",target);
 			}
 		},
         num: 10006,

@@ -120,6 +120,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			workup: ["8M", "7M"],
 			worryseed: ["8L30", "7T", "7L31", "6T", "6L31", "5T", "5L31", "4T", "4L31"],
 			pollenhazard: ["8M", "7M"],
+			astroshift: ["8M", "7M"],
 		},
 		eventData: [
 			{generation: 3, level: 70, moves: ["sweetscent", "growth", "solarbeam", "synthesis"], pokeball: "pokeball"},

@@ -7238,7 +7238,7 @@ export const Items: {[itemid: string]: ItemData} = {
         onFaint(pokemon, target, move) {
             this.useMove("spikes",pokemon);
         },
-        num: 974,
+        num: 10006,
         gen: 8,
     },
 };

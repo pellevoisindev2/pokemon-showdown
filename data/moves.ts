@@ -19910,7 +19910,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "all",
+		target: "normal",
 		type: "Grass",
 		zMove: {boost: {def: 1}},
 		contestType: "Beautiful",

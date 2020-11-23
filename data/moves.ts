@@ -20746,7 +20746,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (!source || target.side === source.side) {
 					return;
 				}
-				let statsLowered = false;
+				let speedLowered = false;
 				let i: BoostName;
 					if (boost['spe']! < 0) {
 						speedLowered = true;

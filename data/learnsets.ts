@@ -120,7 +120,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			workup: ["8M", "7M"],
 			worryseed: ["8L30", "7T", "7L31", "6T", "6L31", "5T", "5L31", "4T", "4L31"],
 			pollenhazard: ["8M", "7M"],
-			astroshift: ["8M", "7M"],
 		},
 		eventData: [
 			{generation: 3, level: 70, moves: ["sweetscent", "growth", "solarbeam", "synthesis"], pokeball: "pokeball"},
@@ -43879,8 +43878,8 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			voltswitch: ["8M", "8L33", "7M", "6M", "5M"],
 			wildcharge: ["8M", "8L80", "7M", "7L63", "6M", "6L63", "5M", "5L63"],
 			closecombat: ["8M", "7M"],
-			headcrash: ["8M", "7M"],
 			headcharge: ["8M", "7M"],
+			heatcrash: ["8M", "7M"],
 		},
 	},
 	cranidos: {

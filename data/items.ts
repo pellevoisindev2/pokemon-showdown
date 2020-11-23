@@ -7244,9 +7244,12 @@ export const Items: {[itemid: string]: ItemData} = {
 	bagofcaltrops: {
         name: "Bag of Caltrops",
         spritenum: 2,
-        onFaint(pokemon, target, move) {
-			this.useMove("spikes", pokemon);
-        },
+        onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (!target.hp) {
+				this.useMove("spikes",pokemon);
+			}
+		},
         num: 10006,
         gen: 8,
     },

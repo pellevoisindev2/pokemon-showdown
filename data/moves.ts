@@ -20746,7 +20746,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (!source || target.side === source.side) {
 					return;
 				}
-				if (source.volatiles['astroshift'].duration === 2) {
+				if (target.volatiles['astroshift'].duration === 2) {
 					return;
 				}
 				let speedLowered = false;

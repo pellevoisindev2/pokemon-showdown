@@ -571,7 +571,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	geodude: {
-		tier: "lc",
+		tier: "LC",
 	},
 	geodudealola: {
 		tier: "LC",
@@ -763,7 +763,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	drowzee: {
-		tier: "lc",
+		tier: "LC",
 	},
 	hypno: {
 		tier: "PU",
@@ -787,7 +787,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUber)",
 	},
 	voltorb: {
-		tier: "lc",
+		tier: "LC",
 	},
 	electrode: {
 		tier: "RU",
@@ -1892,7 +1892,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	wurmple: {
 		tier: "LC",
 	},
-	silcoon: {
+	siLCoon: {
 		tier: "NFE",
 	},
 	beautifly: {
@@ -2048,7 +2048,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	skitty: {
 		tier: "LC",
 	},
-	delcatty: {
+	deLCatty: {
 		tier: "PU",
 	},
 	sableye: {
@@ -3934,7 +3934,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	larvesta: {
 		tier: "LC",
 	},
-	volcarona: {
+	voLCarona: {
 		randomBattleMoves: ["bugbuzz", "fireblast", "gigadrain", "quiverdance", "roost"],
 		randomBattleLevel: 80,
 		randomDoubleBattleMoves: ["bugbuzz", "gigadrain", "heatwave", "hurricane", "protect", "quiverdance"],
@@ -4549,7 +4549,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
-	volcanion: {
+	voLCanion: {
 		randomBattleMoves: ["defog", "earthpower", "flamethrower", "sludgebomb", "steameruption"],
 		randomBattleLevel: 82,
 		randomDoubleBattleMoves: ["earthpower", "heatwave", "protect", "sludgebomb", "steameruption"],
@@ -5692,14 +5692,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "AG",
 		doublesTier: "(DUber)",
 	},
-	milcery: {
+	miLCery: {
 		tier: "LC",
 	},
-	alcremie: {
+	aLCremie: {
 		tier: "PU",
 		doublesTier: "(DUU)",
 	},
-	alcremiegmax: {
+	aLCremiegmax: {
 		randomBattleMoves: ["calmmind", "dazzlinggleam", "mysticalfire", "psychic", "recover"],
 		randomBattleLevel: 88,
 		randomDoubleBattleMoves: ["dazzlinggleam", "decorate", "mysticalfire", "protect", "recover"],

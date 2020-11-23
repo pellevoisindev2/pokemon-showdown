@@ -20756,11 +20756,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 					this.boost({spd: 2}, target, target, null, true);
 				}
 			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Water",
 		zMove: {boost: {def: 1}},
 		contestType: "Beautiful",
-		},
 	},
 };

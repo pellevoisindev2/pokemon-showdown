@@ -76902,6 +76902,8 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			weatherball: ["8M"],
 			wideguard: ["8L48"],
 			crystalwave: ["8M", "7M"],
+			moonblast: ["8M", "7M"],
+			chillingwave: ["8M", "7M"],
 		},
 	},
 	stonjourner: {

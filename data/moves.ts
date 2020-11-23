@@ -20746,6 +20746,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (!source || target.side === source.side) {
 					return;
 				}
+				if (source.volatiles['astroshift'].duration === 2) {
+					return;
+				}
 				let speedLowered = false;
 				let i: BoostName;
 					if (boost['spe']! < 0) {
@@ -20755,6 +20758,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 					//this.add('-ability', target, 'Defiant');
 					this.boost({spd: 2}, target, target, null, true);
 				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Astro Shift');
 			},
 		},
 		secondary: null,

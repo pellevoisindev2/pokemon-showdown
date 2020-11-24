@@ -2354,6 +2354,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	castformsnowy: {
 		isNonstandard: "Past",
 	},
+	castformtoxic: {
+		isNonstandard: "Past",
+	},
+	castformsandy: {
+		isNonstandard: "Past",
+	},
 	kecleon: {
 		isNonstandard: "Past",
 		tier: "Illegal",

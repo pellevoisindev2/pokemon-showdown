@@ -7235,21 +7235,21 @@ export const Items: {[itemid: string]: ItemData} = {
 	// bagofcaltrops: {
         // name: "Bag of Caltrops",
         // spritenum: 2,
-        // onFaint(pokemon, target, move) {
-            // this.useMove("spikes",pokemon);
-        // },
+        // onDamagingHitOrder: 1,
+		// onDamagingHit(damage, target, source, move) {
+			// if (!target.hp) {
+				// this.useMove("spikes",target);
+			// }
+		// },
         // num: 10006,
         // gen: 8,
     // },
 	bagofcaltrops: {
         name: "Bag of Caltrops",
         spritenum: 2,
-        onDamagingHitOrder: 1,
-		onDamagingHit(damage, target, source, move) {
-			if (!target.hp) {
-				this.useMove("spikes",target);
-			}
-		},
+		onFaint(target, source, effect) {
+			source.side.foe.addSideCondition('spikes');
+		}
         num: 10006,
         gen: 8,
     },

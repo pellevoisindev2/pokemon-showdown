@@ -83547,7 +83547,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			echoedvoice: ["8M", "7M"],
 			electroball: ["8M", "7M"],
 			electroweb: ["8M", "7M"],
-			emebr: ["8M", "7M"],
+			ember: ["8M", "7M"],
 			fairywind: ["8M", "7M"],
 			firespin: ["8M", "7M"],
 			finalgambit: ["8M", "7M"],

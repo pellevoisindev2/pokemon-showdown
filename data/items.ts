@@ -7248,7 +7248,7 @@ export const Items: {[itemid: string]: ItemData} = {
         name: "Bag of Caltrops",
         spritenum: 2,
 		onFaint(target, source, effect) {
-			source.side.foe.addSideCondition('spikes');
+			target.side.foe.addSideCondition('spikes');
 		},
         num: 10006,
         gen: 8,

@@ -6327,4 +6327,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	corralloi: {
 		tier: "RU",
 	},
+	delibirdgalar: {
+		tier: "UU",
+	},
 };

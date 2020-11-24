@@ -7249,7 +7249,7 @@ export const Items: {[itemid: string]: ItemData} = {
         spritenum: 2,
 		onFaint(target, source, effect) {
 			source.side.foe.addSideCondition('spikes');
-		}
+		},
         num: 10006,
         gen: 8,
     },

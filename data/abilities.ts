@@ -4761,6 +4761,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	corruptedintention: {
 		onTryHit(pokemon, target, move) {
+			console.log("move.id: "+move.id);
 			if (move.id === 'toxicspikes') {
 				target.side.foe.addSideCondition('toxicspikes');
 			}

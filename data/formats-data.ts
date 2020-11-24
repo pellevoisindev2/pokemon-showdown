@@ -2342,8 +2342,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	castform: {
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "PU",
 	},
 	castformsunny: {
 		isNonstandard: "Past",

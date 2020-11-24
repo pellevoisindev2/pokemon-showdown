@@ -4753,10 +4753,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	forestembrace: {
 		onStart(pokemon) {
 			if (!pokemon.setType('Grass')) return false;
-				this.add('-start', pokemon, 'typechange', 'Grass', '[from] ability: Forest Embrace');
+			this.add('-start', pokemon, 'typechange', 'Grass', '[from] ability: Forest Embrace');
 		},
 		name: "Forest Embrace",
 		rating: 0,
-		num: 16,
+		num: 1020,
+	},
+	corruptedintention: {
+		onTryHit(pokemon, target, move) {
+			if (move.id === 'toxicspikes') {
+				target.side.foe.addSideCondition('toxicspikes');
+			}
+		},
+		name: "Corrupted Intention",
+		rating: 0,
+		num: 1021,
 	},
 };

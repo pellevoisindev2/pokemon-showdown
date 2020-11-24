@@ -6318,4 +6318,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
+	crawcomb: {
+		tier: "UU",
+	},
+	ibroxiz: {
+		tier: "LC",
+	},
+	corralloi: {
+		tier: "RU",
+	},
 };

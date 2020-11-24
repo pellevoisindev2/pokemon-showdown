@@ -20075,7 +20075,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	nitricstrike: {
 		num: 858,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 60,
 		category: "Physical",
 		name: "Nitric Strike",
 		pp: 20,
@@ -20500,7 +20500,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		secondary: null,
-		target: "all",
+		target: "normal",
 		type: "Normal",
 		zMove: {boost: {spe: 1}},
 		contestType: "Tough",

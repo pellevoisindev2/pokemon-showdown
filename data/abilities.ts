@@ -4764,6 +4764,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			console.log("move.id: "+move.id);
 			if (move.id === 'toxicspikes') {
 				target.side.foe.addSideCondition('toxicspikes');
+				target.side.foe.addSideCondition('toxicspikes');
 			}
 		},
 		name: "Corrupted Intention",

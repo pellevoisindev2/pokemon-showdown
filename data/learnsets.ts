@@ -83565,7 +83565,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			megadrain: ["8M", "7M"],
 			meteorbeam: ["8M", "7M"],
 			mirrorshot: ["8M", "7M"],
-			mistexplosion: ["8M", "7M"],
+			mistyexplosion: ["8M", "7M"],
 			mudbomb: ["8M", "7M"],
 			muddywater: ["8M", "7M"],
 			mudshot: ["8M", "7M"],

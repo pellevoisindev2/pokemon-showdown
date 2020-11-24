@@ -4760,10 +4760,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 1020,
 	},
 	corruptedintention: {
-		onTryHit(pokemon, target, move) {
+		onModifyMove(move, source, target) {
 			console.log("move.id: "+move.id);
 			if (move.id === 'toxicspikes') {
-				target.side.foe.addSideCondition('toxicspikes');
 				target.side.foe.addSideCondition('toxicspikes');
 			}
 		},

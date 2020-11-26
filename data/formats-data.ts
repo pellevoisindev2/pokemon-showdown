@@ -6330,4 +6330,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	delibirdgalar: {
 		tier: "UU",
 	},
+	skulpent: {
+		tier: "OU",
+	},
 };

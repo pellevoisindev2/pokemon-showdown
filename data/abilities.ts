@@ -4769,4 +4769,44 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 1021,
 	},
+	parasite: {
+        onTryHealPriority: 1,
+        onTryHeal(damage, target, source, effect) {
+            const heals = ['drain', 'leechseed', 'ingrain', 'aquaring', 'strengthsap'];
+            if (heals.includes(effect.id)) {
+                return this.chainModify([0x14CC, 0x1000]);
+            }
+        },
+        name: "Parasite",
+        rating: 2.5,
+        num: 1022,
+    },
+	perseverance: {
+        onBasePowerPriority: 7,
+        onBasePower(basePower, pokemon, target, move) {
+            if (pokemon.side.pokemonLeft === 1) {
+                return this.chainModify(1.25);
+            }
+        },
+        onModifyDefPriority: 6,
+        onModifyDef(def) {
+            if (pokemon.side.pokemonLeft === 1) {
+                return this.chainModify(1.25);
+            }
+        },
+        onModifySpDPriority: 6,
+        onModifySpD(spd) {
+            if (pokemon.side.pokemonLeft === 1) {
+                return this.chainModify(1.25);
+            }
+        },
+        onStart(pokemon) {
+            if (pokemon.side.pokemonLeft === 1) {
+                this.add('-ability', pokemon, 'Perseverance');
+            }
+        },
+        name: "Perseverance",
+        rating: 4,
+        num: 1023,
+    },
 };

@@ -83789,7 +83789,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 	},
 	skulpent: {
 		learnset: {
-			spectralfangs: ["8M", "7M"],
+			spectralfang: ["8M", "7M"],
 			coil: ["8M", "7M"],
 			icefang: ["8M", "7M"],
 			firefang: ["8M", "7M"],

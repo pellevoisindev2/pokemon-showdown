@@ -811,6 +811,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 				}
 				continue;
 			}
+			console.log("target: "+target);
 			return {error: `'${escapeHTML(target)}' could not be found in any of the search categories.`};
 		}
 		if (!orGroup.skip) {
@@ -1466,7 +1467,7 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 				orGroup.volatileStatus[target] = !isNotSearch;
 				continue;
 			}
-
+			console.log("oldTarget: "+oldTarget);
 			return {error: `'${escapeHTML(oldTarget)}' could not be found in any of the search categories.`};
 		}
 		if (!orGroup.skip) {

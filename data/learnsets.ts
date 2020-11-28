@@ -47809,6 +47809,11 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			meditate: ["8M", "7M"],
 			focusup: ["8M", "7M"],
 			revengeblast: ["8M", "7M"],
+			moonblast: ["8M", "7M"],
+			dazzlinggleam: ["8M", "7M"],
+			fairywind: ["8M", "7M"],
+			playrough: ["8M", "7M"],
+			magicdarts: ["8M", "7M"],
 		},
 		eventData: [
 			{generation: 4, level: 50, shiny: 1, moves: ["confusion", "luckychant", "futuresight", "charm"]},

@@ -83870,7 +83870,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			icebeam:["8M","7M"],
 			smartstrike:["8M","7M"],
 			megahorn:["8M","7M"],
-			xscissors:["8M","7M"],
+			xscissor:["8M","7M"],
 			drillrun:["8M","7M"],
 			waterspout:["8M","7M"],
 			bodyslam:["8M","7M"],

@@ -17032,4 +17032,15 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		eggGroups: ["Water 1", "Field"],
 	},
+	narpoon: {
+		num: 10004,
+		name: "Narpoon",
+		types: ["Water", "Steel"],
+		baseStats: {hp: 100, atk: 110, def: 70, spa: 70, spd: 50, spe: 100},
+		abilities: {0: "Defiant", 1: "Hustle", H: "Long Reach"},
+		heightm: 3,
+		weightkg: 100,
+		color: "Blue",
+		eggGroups: ["Water 1", "Field"],
+	},
 };

@@ -5760,12 +5760,12 @@ export const MovesText = {
 		desc: "Has a 40% chance to poison the target.",
 		shortDesc: "40% chance to poison.",
 	},
-	clearlight:
+	clearlight: {
 		name: "Clear Light",
 		shortDesc: "Clears user status. Boosts the user's acc. by 1.",
 	},
 	lightspeed: {
-		name: "light Speed",
+		name: "Light Speed",
 		desc: "No additional effect.",
 		shortDesc: "Usually goes first.",
 	},

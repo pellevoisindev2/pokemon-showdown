@@ -4911,13 +4911,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	sacredlight: {
         onStart(pokemon) {
-			pokemon.side.foe.addSideCondition('safeguard');
+			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			target.side.foe.addSideCondition('safeguard');
         },
         onSwitchOut(pokemon) {
-            pokemon.side.foe.removeSideCondition('safeguard');
+			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+            target.side.foe.removeSideCondition('safeguard');
         },
         onFaint(pokemon) {
-            pokemon.side.foe.removeSideCondition('safeguard');
+			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+            target.side.foe.removeSideCondition('safeguard');
         },
         name: "Sacred Light",
         rating: 3,
@@ -4927,6 +4930,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyDefPriority: 5,
 		onModifyDef(def) {
 			if (this.hp <= this.maxhp / 2) {
+				console.log("POULAY");
 				this.boost({def: 1});
 			}
 		},

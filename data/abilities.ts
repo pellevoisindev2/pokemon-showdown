@@ -4910,14 +4910,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 1030,
 	},
 	sacredlight: {
-        onStart(source) {
-			this.side.foe.addSideCondition('safeguard');
+        onStart(pokemon) {
+			pokemon.side.foe.addSideCondition('safeguard');
         },
-        onSwitchOut(source) {
-            this.side.foe.removeSideCondition('safeguard');
+        onSwitchOut(pokemon) {
+            pokemon.side.foe.removeSideCondition('safeguard');
         },
-        onFaint(source) {
-            this.side.foe.removeSideCondition('safeguard');
+        onFaint(pokemon) {
+            pokemon.side.foe.removeSideCondition('safeguard');
         },
         name: "Sacred Light",
         rating: 3,

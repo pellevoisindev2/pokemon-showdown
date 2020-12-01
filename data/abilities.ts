@@ -1571,11 +1571,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 246,
 	},
-	illuminate: {
-		name: "Illuminate",
-		rating: 0,
-		num: 35,
-	},
 	illusion: {
 		onBeforeSwitchIn(pokemon) {
 			pokemon.illusion = null;
@@ -1676,6 +1671,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			if (effect.id === 'daunt') {
                 delete boost.spa;
+                this.add('-immune', target, '[from] ability: Inner Focus');
+            }
+			if (effect.id === 'petrify') {
+                delete boost.spe;
                 this.add('-immune', target, '[from] ability: Inner Focus');
             }
 		},
@@ -2425,6 +2424,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			if (effect.id === 'daunt') {
                 delete boost.spa;
+                this.add('-immune', target, '[from] ability: Oblivious');
+            }
+			if (effect.id === 'petrify') {
+                delete boost.spe;
                 this.add('-immune', target, '[from] ability: Oblivious');
             }
 		},
@@ -4848,13 +4851,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 1026,
 	},
-	hybris: {
+	hubris: {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
 				this.boost({spa: length}, source);
 			}
 		},
-		name: "Hybris",
+		name: "Hubris",
 		rating: 3,
 		num: 1027,
 	},
@@ -4887,4 +4890,81 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 1029,
 	},
+	supernova: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Cosmic' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Supernova boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Cosmic' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Supernova boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Supernova",
+		rating: 2,
+		num: 1030,
+	},
+	sacredlight: {
+        onStart(source) {
+			source.side.foe.addSideCondition('safeguard');
+        },
+        onSwitchOut(source) {
+            source.side.foe.removeSideCondition('safeguard');
+        },
+        onFaint(source) {
+            source.side.foe.removeSideCondition('safeguard');
+        },
+        name: "Sacred Light",
+        rating: 3,
+        num: 1031,
+    },
+	fortitude: {
+		onModifyDefPriority: 5,
+		onModifyDef(def, pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 2) {
+				this.boost({def: 1}, pokemon);
+			}
+		},
+		onModifySpDPriority: 5,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 2) {
+				this.boost({spd: 1}, pokemon);
+			}
+		},
+		name: "Fortitude",
+		rating: -1,
+		num: 1032,
+	},
+	sunray: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Light' && ['sunnyday', 'desolateland'].includes(attacker.effectiveWeather())) {
+				this.debug('Sunray boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(spa, attacker, defender, move) {
+			if (move.type === 'Light' && ['sunnyday', 'desolateland'].includes(attacker.effectiveWeather())) {
+				this.debug('Sunray boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Sunray",
+		rating: 2,
+		num: 1033,
+	},
+	illuminate: {
+        onStart(source) {
+			this.boost({accuracy: 1}, source);
+        },
+        name: "Illuminate",
+        rating: 3,
+        num: 1034,
+    },
 };

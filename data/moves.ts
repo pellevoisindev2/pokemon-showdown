@@ -24,9 +24,9 @@ reflectable: Bounced back to the original user by Magic Coat or the Magic Bounce
 snatch: Can be stolen from the original user and instead used by another Pokemon using Snatch.
 sound: Has no effect on Pokemon with the Soundproof Ability.
 kiss: Power is multiplied by 1.5 when used by a Pokemon with the Lovely Lips Ability.
-slap: Power is multiplied by 1.5 when used by a Pokemon with the Slapper Ability.
-kick: Power is multiplied by 1.3 when used by a Pokemon with the Kicker Lips Ability.
-blade: Power is multiplied by 1.3 when used by a Pokemon with the Blade Master Ability.
+slap: Power is multiplied by 1.2 when used by a Pokemon with the Slapper Ability.
+kick: Power is multiplied by 1.2 when used by a Pokemon with the Kicker Ability.
+blade: Power is multiplied by 1.2 when used by a Pokemon with the Blade Master Ability.
 expert: Power is multiplied by 1.3 when used by a Pokemon with the Expert Ability.
 pivot: Pivoting moves, avoided by Fluffy Bond users.
 

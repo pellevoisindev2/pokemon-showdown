@@ -4792,13 +4792,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             }
         },
         onModifyDefPriority: 6,
-        onModifyDef(def) {
+        onModifyDef(def, pokemon) {
             if (pokemon.side.pokemonLeft === 1) {
                 return this.chainModify(1.25);
             }
         },
         onModifySpDPriority: 6,
-        onModifySpD(spd) {
+        onModifySpD(spd, pokemon) {
             if (pokemon.side.pokemonLeft === 1) {
                 return this.chainModify(1.25);
             }
@@ -4911,13 +4911,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	sacredlight: {
         onStart(source) {
-			source.side.foe.addSideCondition('safeguard');
+			this.side.foe.addSideCondition('safeguard');
         },
         onSwitchOut(source) {
-            source.side.foe.removeSideCondition('safeguard');
+            this.side.foe.removeSideCondition('safeguard');
         },
         onFaint(source) {
-            source.side.foe.removeSideCondition('safeguard');
+            this.side.foe.removeSideCondition('safeguard');
         },
         name: "Sacred Light",
         rating: 3,
@@ -4925,15 +4925,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     },
 	fortitude: {
 		onModifyDefPriority: 5,
-		onModifyDef(def, pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 2) {
-				this.boost({def: 1}, pokemon);
+		onModifyDef(def) {
+			if (this.hp <= this.maxhp / 2) {
+				this.boost({def: 1});
 			}
 		},
 		onModifySpDPriority: 5,
-		onModifySpD(spd, pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 2) {
-				this.boost({spd: 1}, pokemon);
+		onModifySpD(spd) {
+			if (this.hp <= this.maxhp / 2) {
+				this.boost({spd: 1});
 			}
 		},
 		name: "Fortitude",
@@ -4960,11 +4960,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 1033,
 	},
 	illuminate: {
-        onStart(source) {
-			this.boost({accuracy: 1}, source);
-        },
-        name: "Illuminate",
-        rating: 3,
-        num: 1034,
-    },
+		onSourceModifyAccuracyPriority: 9,
+		onSourceModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			this.debug('illuminate - enhancing accuracy');
+			return accuracy * 1.3;
+		},
+		name: "Illuminate",
+		rating: 3,
+		num: 1034,
+	},
 };

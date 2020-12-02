@@ -4927,21 +4927,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         num: 1031,
     },
 	fortitude: {
-		onModifyDefPriority: 5,
-		onModifyDef(def, pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 2) {
-				return this.chainModify(1.5);
-			}
-		},
-		onModifySpDPriority: 5,
-		onModifySpD(spd, pokemon) {
-			if (pokemon.hp <= pokemon.maxhp / 2) {
-				console.log("ET CA REDUIT LA SPD");
-				return this.chainModify(1.5);
+		onAfterMoveSecondary(target, source, move) {
+			if (!source || source === target || !target.hp || !move.totalDamage) return;
+			const lastAttackedBy = target.getLastAttackedBy();
+			if (!lastAttackedBy) return;
+			const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
+			if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
+				this.boost({def: 1, spd: 1});
 			}
 		},
 		name: "Fortitude",
-		rating: -1,
+		rating: 2,
 		num: 1032,
 	},
 	sunray: {

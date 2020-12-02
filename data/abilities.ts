@@ -4928,16 +4928,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     },
 	fortitude: {
 		onModifyDefPriority: 5,
-		onModifyDef(def) {
-			if (this.hp <= this.maxhp / 2) {
-				console.log("POULAY");
-				this.boost({def: 1});
+		onModifyDef(def, pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 2) {
+				return this.chainModify(1.5);
 			}
 		},
 		onModifySpDPriority: 5,
-		onModifySpD(spd) {
-			if (this.hp <= this.maxhp / 2) {
-				this.boost({spd: 1});
+		onModifySpD(spd, pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 2) {
+				console.log("ET CA REDUIT LA SPD");
+				return this.chainModify(1.5);
 			}
 		},
 		name: "Fortitude",

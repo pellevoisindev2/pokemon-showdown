@@ -485,7 +485,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	armthrust: {
 		num: 292,
 		accuracy: 100,
-		basePower: 15,
+		basePower: 25,
 		category: "Physical",
 		name: "Arm Thrust",
 		pp: 20,
@@ -2314,7 +2314,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	cometpunch: {
 		num: 4,
 		accuracy: 85,
-		basePower: 18,
+		basePower: 25,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Comet Punch",
@@ -2324,7 +2324,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
-		type: "Normal",
+		type: "Cosmic",
 		maxMove: {basePower: 100},
 		contestType: "Tough",
 	},
@@ -2923,7 +2923,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	cut: {
 		num: 15,
-		accuracy: 95,
+		accuracy: 100,
 		basePower: 50,
 		category: "Physical",
 		name: "Cut",
@@ -3212,7 +3212,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	dig: {
 		num: 91,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 100,
 		category: "Physical",
 		name: "Dig",
 		pp: 10,
@@ -3359,7 +3359,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	dive: {
 		num: 291,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 100,
 		category: "Physical",
 		name: "Dive",
 		pp: 10,
@@ -5348,7 +5348,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	fly: {
 		num: 19,
 		accuracy: 95,
-		basePower: 90,
+		basePower: 100,
 		category: "Physical",
 		name: "Fly",
 		pp: 15,
@@ -9277,6 +9277,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Cool",
 	},
+	// knockoff: {
+		// num: 282,
+		// accuracy: 100,
+		// basePower: 65,
+		// category: "Physical",
+		// name: "Knock Off",
+		// pp: 20,
+		// priority: 0,
+		// flags: {contact: 1, protect: 1, mirror: 1},
+		// onBasePower(basePower, source, target, move) {
+			// const item = target.getItem();
+			// if (!this.singleEvent('TakeItem', item, target.itemData, target, target, move, item)) return;
+			// if (item.id) {
+				// return this.chainModify(1.5);
+			// }
+		// },
+		// onAfterHit(target, source) {
+			// if (source.hp) {
+				// const item = target.takeItem();
+				// if (item) {
+					// this.add('-enditem', target, item.name, '[from] move: Knock Off', '[of] ' + source);
+				// }
+			// }
+		// },
+		// secondary: null,
+		// target: "normal",
+		// type: "Dark",
+		// contestType: "Clever",
+	// },
 	knockoff: {
 		num: 282,
 		accuracy: 100,
@@ -9295,6 +9324,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		onAfterHit(target, source) {
 			if (source.hp) {
+				target.lastItem = target.takeItem();
 				const item = target.takeItem();
 				if (item) {
 					this.add('-enditem', target, item.name, '[from] move: Knock Off', '[of] ' + source);
@@ -11574,13 +11604,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onStart(side, source) {
 				this.add('-fieldstart', 'move: Mud Sport', '[of] ' + source);
 			},
-			onBasePowerPriority: 1,
-			onBasePower(basePower, attacker, defender, move) {
+			onTryHitPriority: 1,
+			onTryHit(target, source, move) {
 				if (move.type === 'Electric') {
-					this.debug('mud sport weaken');
-					return this.chainModify([0x548, 0x1000]);
+					this.debug('mud sport fire immunity');
+					return false;
 				}
 			},
+			// onBasePowerPriority: 1,
+			// onBasePower(basePower, attacker, defender, move) {
+				// if (move.type === 'Electric') {
+					// this.debug('mud sport weaken');
+					// return this.chainModify([0x548, 0x1000]);
+				// }
+			// },
 			onResidualOrder: 21,
 			onEnd() {
 				this.add('-fieldend', 'move: Mud Sport');
@@ -16880,7 +16917,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
-		type: "Normal",
+		type: "Fighting",
 		contestType: "Tough",
 	},
 	strengthsap: {
@@ -19024,13 +19061,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onStart(side, source) {
 				this.add('-fieldstart', 'move: Water Sport', '[of] ' + source);
 			},
-			onBasePowerPriority: 1,
-			onBasePower(basePower, attacker, defender, move) {
+			onTryHitPriority: 1,
+			onTryHit(target, source, move) {
 				if (move.type === 'Fire') {
-					this.debug('water sport weaken');
-					return this.chainModify([0x548, 0x1000]);
+					this.debug('water sport fire immunity');
+					return false;
 				}
 			},
+			// onBasePowerPriority: 1,
+			// onBasePower(basePower, attacker, defender, move) {
+				// if (move.type === 'Fire') {
+					// this.debug('water sport weaken');
+					// return this.chainModify([0x548, 0x1000]);
+				// }
+			// },
 			onResidualOrder: 21,
 			onEnd() {
 				this.add('-fieldend', 'move: Water Sport');
@@ -20255,7 +20299,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	pollenhazard: {
 		num: 878,
-		accuracy: 60,
+		accuracy: 70,
 		basePower: 0,
 		category: "Status",
 		name: "Pollen Hazard",

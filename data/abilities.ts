@@ -251,6 +251,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	battlearmor: {
 		onCriticalHit: false,
+		onModifySecondaries(secondaries) {
+			this.debug('Battle Armor prevent secondary');
+			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+		},
 		name: "Battle Armor",
 		rating: 1,
 		num: 4,
@@ -1898,6 +1902,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				move.type = 'Water';
 			}
 		},
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				this.debug('Liquid Voice boost');
+				return this.chainModify(1.1);
+			}
+		},
 		name: "Liquid Voice",
 		rating: 1.5,
 		num: 204,
@@ -3316,11 +3326,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	shellarmor: {
 		onCriticalHit: false,
+		onModifySecondaries(secondaries) {
+			this.debug('Shell Armor prevent secondary');
+			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+		},
 		name: "Shell Armor",
 		rating: 1,
 		num: 75,
 	},
 	shielddust: {
+		onCriticalHit: false,
 		onModifySecondaries(secondaries) {
 			this.debug('Shield Dust prevent secondary');
 			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
@@ -4969,5 +4984,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Illuminate",
 		rating: 3,
 		num: 1034,
+	},
+    magicalarcher: {
+		onModifyMovePriority: 22,
+		onModifyMove(move) {
+			if (move.category === "Physical" && !move.flags['contact']) {
+				move.category = "Special";
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.category === "Physical" && !move.flags['contact']) {
+				this.debug('Magical Archer boost');
+				return this.chainModify(1.1);
+			}
+		},
+		name: "Magical Archer",
+		rating: 3,
+		num: 1035,
 	},
 };

@@ -20162,7 +20162,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onModifyTypePriority
         onModifyType(move, source) {
             move.type = source.getTypes()[0];
-			console.log("onModifyType type: "+move.type);
         },
         onHit(target, source, move) {
             if (source.getTypes().length === 1) {
@@ -20170,7 +20169,6 @@ export const Moves: {[moveid: string]: MoveData} = {
             } else {
                 move.type = source.getTypes()[1];
             }
-			console.log("onHit type: "+move.type);
         },
         multihit: 2,
         secondary: null,

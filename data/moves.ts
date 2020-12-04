@@ -20194,13 +20194,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 			// console.log("onModifyType type: "+move.type);
         // },
         onTryHit(target, source, move) {
-			if (move.volatileStatus) {
+			if (source.volatiles['firsthit']) {
 				move.type = "Grass";
-				delete move.volatileStatus;
+				delete source.volatiles['firsthit'];
 				console.log("onTryHit with volatileStatus type: "+move.type);
 			} 
 			else {
-				move.addVolatile('firsthit');
+				source.addVolatile('firsthit');
 				move.type = "Fire";
 				// if (source.getTypes().length === 1) {
 					// move.type = source.getTypes()[0];

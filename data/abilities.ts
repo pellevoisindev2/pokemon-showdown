@@ -4212,14 +4212,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	waterabsorb: {
 		onTryHit(target, source, move) {
-			if (source.volatiles['dualstrike']) {
-				if (source.volatiles['dualstrikefirst']) {
+			if (target.volatiles['dualstrike']) {
+				if (target.volatiles['dualstrikefirst']) {
 					move.type = "Steel";
 				}
-				if (source.volatiles['dualstrikesecond']) {
+				if (target.volatiles['dualstrikesecond']) {
 					move.type = "Water";
 				}
 			}
+			console.log("onTryHit (waterabsorb) type: "+source.volatiles);
+			console.log("onTryHit (waterabsorb) type: "+target.volatiles);
 			console.log("onTryHit (waterabsorb) type: "+move.type);
 			if (target !== source && move.type === 'Water') {
 				if (!this.heal(target.baseMaxhp / 4)) {

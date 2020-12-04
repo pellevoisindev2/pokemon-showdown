@@ -20208,6 +20208,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move.type = source.getTypes()[0];
 				console.log("onTryHit without volatileStatus type: "+move.type);
 			}
+			if (target.hasAbility('waterabsorb' && move.type == "Water")) {
+				this.heal(target.maxhp / 4);
+				return false;
+			}
         },
         multihit: 2,
         secondary: null,

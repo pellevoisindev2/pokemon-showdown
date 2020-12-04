@@ -20187,20 +20187,29 @@ export const Moves: {[moveid: string]: MoveData} = {
         pp: 10,
         priority: 0,
         flags: {contact: 1, protect: 1, mirror: 1},
-        onModifyType(move, source) {
+        // onModifyType(move, source) {
             //move.type = source.getTypes()[0];
-			if (move.hit == 1) move.type = 'Normal';
-            if (move.hit == 2) move.type = 'Water';
-			console.log("onModifyType type: "+move.type);
-        },
-        // onHit(target, source, move) {
-            // if (source.getTypes().length === 1) {
-                // move.type = source.getTypes()[0];
-            // } else {
-                // move.type = source.getTypes()[1];
-            // }
-			// console.log("onHit type: "+move.type);
+			// if (move.hit == 1) move.type = 'Normal';
+            // if (move.hit == 2) move.type = 'Water';
+			// console.log("onModifyType type: "+move.type);
         // },
+        onTryHit(target, source, move) {
+			if (move.volatileStatus) {
+				move.type = "Grass";
+				delete move.volatileStatus;
+				console.log("onTryHit with volatileStatus type: "+move.type);
+			} 
+			else {
+				move.addVolatile('firsthit');
+				move.type = "Fire";
+				// if (source.getTypes().length === 1) {
+					// move.type = source.getTypes()[0];
+				// } else {
+					// move.type = source.getTypes()[1];
+				// }
+				console.log("onTryHit without volatileStatus type: "+move.type);
+			}
+        },
         multihit: 2,
         secondary: null,
         target: "normal",

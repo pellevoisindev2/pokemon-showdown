@@ -20163,7 +20163,8 @@ export const Moves: {[moveid: string]: MoveData} = {
             move.type = source.getTypes()[0];
 			console.log("onModifyType type: "+move.type);
         },
-        onHit(target, source, move) {
+		onTryHitPriority: 1,
+        onTryHit(target, source, move) {
             if (source.getTypes().length === 1) {
                 move.type = source.getTypes()[0];
             } else {

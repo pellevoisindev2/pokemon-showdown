@@ -20206,9 +20206,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			console.log("has water absorb: "+target.hasAbility('waterabsorb'));
 			console.log("move.type: "+ move.type);
-			if (target.hasAbility('waterabsorb') && move.type === "Water") {
+			if ( (target.hasAbility('waterabsorb') && move.type === "Water") || (target.hasAbility('voltabsorb') && move.type === "Electric") || (target.hasAbility('lightabsorb') && move.type === "Light") ) {
 				move.basePower = 0;
 				move.heal = [1, 4];
+			}
+			if (target.hasAbility('motordrive') && move.type === "Electric") {
+				move.basePower = 0;
+				move.boosts = {spe: 1};
+			}
+			if ( (target.hasAbility('stormdrain') && move.type === "Water") || (target.hasAbility('lightningrod') && move.type === "Electric") ) {
+				move.basePower = 0;
+				move.boosts = {spa: 1};
+			}
+			if (target.hasAbility('sapsipper') && move.type === "Grass") {
+				move.basePower = 0;
+				move.boosts = {atk: 1};
+			}
+			if ( (target.hasAbility('levitate') && move.type === "Ground") || (target.hasAbility('flashfire') && move.type === "Fire") ){
+				move.basePower = 0;
 			}
         },
         multihit: 2,

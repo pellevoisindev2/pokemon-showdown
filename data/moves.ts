@@ -20187,28 +20187,27 @@ export const Moves: {[moveid: string]: MoveData} = {
         pp: 10,
         priority: 0,
         flags: {contact: 1, protect: 1, mirror: 1},
-        // onModifyType(move, source) {
-            //move.type = source.getTypes()[0];
+        onModifyType(move, source) {
+            move.type = "Steel";
 			// if (move.hit == 1) move.type = 'Normal';
             // if (move.hit == 2) move.type = 'Water';
-			// console.log("onModifyType type: "+move.type);
-        // },
+			console.log("onModifyType type: "+move.type);
+        },
         onTryHit(target, source, move) {
 			source.addVolatile('dualstrike');
 			if (source.volatiles['dualstrikefirst']) {
-				move.type = "Water";
+				if (source.getTypes().length === 1) {
+					move.type = source.getTypes()[0];
+				} else {
+					move.type = source.getTypes()[1];
+				}
 				delete source.volatiles['dualstrikefirst'];
 				source.addVolatile('dualstrikesecond');
 				console.log("onTryHit with volatileStatus type: "+move.type);
 			} 
 			else {
 				source.addVolatile('dualstrikefirst');
-				move.type = "Steel";
-				// if (source.getTypes().length === 1) {
-					// move.type = source.getTypes()[0];
-				// } else {
-					// move.type = source.getTypes()[1];
-				// }
+				move.type = source.getTypes()[0];
 				console.log("onTryHit without volatileStatus type: "+move.type);
 			}
         },

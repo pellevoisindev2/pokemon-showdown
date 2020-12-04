@@ -20207,9 +20207,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			console.log("has water absorb: "+target.hasAbility('waterabsorb'));
 			console.log("move.type: "+ move.type);
 			if (target.hasAbility('waterabsorb') && move.type === "Water") {
-				console.log("POULETBRAISAY");
+				move.basePower = 0;
 				move.heal = [1, 4];
-				return false;
 			}
         },
         multihit: 2,

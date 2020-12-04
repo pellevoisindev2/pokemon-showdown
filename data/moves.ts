@@ -20159,15 +20159,18 @@ export const Moves: {[moveid: string]: MoveData} = {
         pp: 10,
         priority: 0,
         flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyTypePriority
         onModifyType(move, source) {
             move.type = source.getTypes()[0];
+			console.log("onModifyType type: "+move.type);
         },
-        onTryHit(target, source, move) {
+        onHit(target, source, move) {
             if (source.getTypes().length === 1) {
                 move.type = source.getTypes()[0];
             } else {
                 move.type = source.getTypes()[1];
             }
+			console.log("onHit type: "+move.type);
         },
         multihit: 2,
         secondary: null,

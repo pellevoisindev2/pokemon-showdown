@@ -4213,6 +4213,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	waterabsorb: {
 		onTryHit(target, source, move) {
 			console.log("onTryHit (waterabsorb) type: "+move.type);
+			if (pokemon.volatiles['dualstrike']) {
+				if (pokemon.volatiles['dualstrikefirst']) {
+					move.type = "Steel";
+				}
+				if (pokemon.volatiles['dualstrikesecond']) {
+					move.type = "Water";
+				}
+			}
 			if (target !== source && move.type === 'Water') {
 				if (!this.heal(target.baseMaxhp / 4)) {
 					this.add('-immune', target, '[from] ability: Water Absorb');

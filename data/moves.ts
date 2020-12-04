@@ -20189,8 +20189,6 @@ export const Moves: {[moveid: string]: MoveData} = {
         flags: {contact: 1, protect: 1, mirror: 1},
         onModifyType(move, source) {
             move.type = "Steel";
-			// if (move.hit == 1) move.type = 'Normal';
-            // if (move.hit == 2) move.type = 'Water';
 			console.log("onModifyType type: "+move.type);
         },
         onTryHit(target, source, move) {

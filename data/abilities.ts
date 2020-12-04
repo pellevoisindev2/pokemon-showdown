@@ -4211,17 +4211,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 254,
 	},
 	waterabsorb: {
-		onTryHit(target, source, move) {
-			if (target.volatiles['dualstrike']) {
-				if (target.volatiles['dualstrikefirst']) {
-					move.type = "Steel";
-				}
-				if (target.volatiles['dualstrikesecond']) {
-					move.type = "Water";
-				}
-			}
-			console.log("onTryHit (waterabsorb) type: "+source.volatiles);
-			console.log("onTryHit (waterabsorb) type: "+target.volatiles);
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			// if (target.volatiles['dualstrike']) {
+				// if (target.volatiles['dualstrikefirst']) {
+					// move.type = "Steel";
+				// }
+				// if (target.volatiles['dualstrikesecond']) {
+					// move.type = "Water";
+				// }
+			// }
 			console.log("onTryHit (waterabsorb) type: "+move.type);
 			if (target !== source && move.type === 'Water') {
 				if (!this.heal(target.baseMaxhp / 4)) {
@@ -4230,6 +4229,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
+		// onTryHit(target, source, move) {
+			// if (target.volatiles['dualstrike']) {
+				// if (target.volatiles['dualstrikefirst']) {
+					// move.type = "Steel";
+				// }
+				// if (target.volatiles['dualstrikesecond']) {
+					// move.type = "Water";
+				// }
+			// }
+			// console.log("onTryHit (waterabsorb) type: "+move.type);
+			// if (target !== source && move.type === 'Water') {
+				// if (!this.heal(target.baseMaxhp / 4)) {
+					// this.add('-immune', target, '[from] ability: Water Absorb');
+				// }
+				// return null;
+			// }
+		// },
 		name: "Water Absorb",
 		rating: 3.5,
 		num: 11,

@@ -20191,6 +20191,11 @@ export const Moves: {[moveid: string]: MoveData} = {
             move.type = "Steel";
 			console.log("onModifyType type: "+move.type);
         },
+		onModifyMove(move, pokemon, target) {
+			if (target.hasAbility('waterabsorb' && move.type == "Water")) {
+				move.heal = [1, 4];
+			}
+		},
         onTryHit(target, source, move) {
 			source.addVolatile('dualstrike');
 			if (source.volatiles['dualstrikefirst']) {
@@ -20207,10 +20212,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				source.addVolatile('dualstrikefirst');
 				move.type = source.getTypes()[0];
 				console.log("onTryHit without volatileStatus type: "+move.type);
-			}
-			if (target.hasAbility('waterabsorb' && move.type == "Water")) {
-				this.heal(target.maxhp / 4);
-				return false;
 			}
         },
         multihit: 2,

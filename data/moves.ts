@@ -20162,7 +20162,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         onModifyType(move, source) {
             move.type = source.getTypes()[0];
         },
-        onHit(target, source, move) {
+        onTryHit(target, source, move) {
             if (source.getTypes().length === 1) {
                 move.type = source.getTypes()[0];
             } else {
@@ -21146,7 +21146,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 90,
 		category: "Special",
 		name: "Solar Orb",
-		pp: 24,
+		pp: 15,
 		priority: 0,
 		flags: {bullet: 1, protect: 1, mirror: 1},
 		secondary: {

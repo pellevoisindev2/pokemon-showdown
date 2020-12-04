@@ -20150,6 +20150,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Water",
 		contestType: "Beautiful",
 	},
+	// dualstrike: {
+        // num: 860,
+        // accuracy: 100,
+        // basePower: 45,
+        // category: "Physical",
+        // name: "Dual Strike",
+        // pp: 10,
+        // priority: 0,
+        // flags: {contact: 1, protect: 1, mirror: 1},
+        // onModifyType(move, source) {
+            // move.type = source.getTypes()[0];
+			// console.log("onModifyType type: "+move.type);
+        // },
+        // onHit(target, source, move) {
+            // if (source.getTypes().length === 1) {
+                // move.type = source.getTypes()[0];
+            // } else {
+                // move.type = source.getTypes()[1];
+            // }
+			// console.log("onHit type: "+move.type);
+        // },
+        // multihit: 2,
+        // secondary: null,
+        // target: "normal",
+        // type: "???",
+        // maxMove: {basePower: 130},
+        // contestType: "Tough",
+    // },
 	dualstrike: {
         num: 860,
         accuracy: 100,
@@ -20160,18 +20188,19 @@ export const Moves: {[moveid: string]: MoveData} = {
         priority: 0,
         flags: {contact: 1, protect: 1, mirror: 1},
         onModifyType(move, source) {
-            move.type = source.getTypes()[0];
+            //move.type = source.getTypes()[0];
+			if (move.hit == 1) move.type = 'Normal';
+            if (move.hit == 2) move.type = 'Water';
 			console.log("onModifyType type: "+move.type);
         },
-		onTryHitPriority: 1,
-        onTryHit(target, source, move) {
-            if (source.getTypes().length === 1) {
-                move.type = source.getTypes()[0];
-            } else {
-                move.type = source.getTypes()[1];
-            }
-			console.log("onHit type: "+move.type);
-        },
+        // onHit(target, source, move) {
+            // if (source.getTypes().length === 1) {
+                // move.type = source.getTypes()[0];
+            // } else {
+                // move.type = source.getTypes()[1];
+            // }
+			// console.log("onHit type: "+move.type);
+        // },
         multihit: 2,
         secondary: null,
         target: "normal",

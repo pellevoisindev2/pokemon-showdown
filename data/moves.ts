@@ -20188,7 +20188,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         priority: 0,
         flags: {contact: 1, protect: 1, mirror: 1},
         onTryHit(target, source, move) {
-			source.addVolatile('dualstrike');
+			//source.addVolatile('dualstrike');
 			if (source.volatiles['dualstrikefirst']) {
 				if (source.getTypes().length === 1) {
 					move.type = source.getTypes()[0];
@@ -20203,27 +20203,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				source.addVolatile('dualstrikefirst');
 				move.type = source.getTypes()[0];
 				console.log("onTryHit without volatileStatus type: "+move.type);
-			}
-			console.log("has water absorb: "+target.hasAbility('waterabsorb'));
-			console.log("move.type: "+ move.type);
-			if ( (target.hasAbility('waterabsorb') && move.type === "Water") || (target.hasAbility('voltabsorb') && move.type === "Electric") || (target.hasAbility('lightabsorb') && move.type === "Light") ) {
-				move.basePower = 0;
-				move.heal = [1, 4];
-			}
-			if (target.hasAbility('motordrive') && move.type === "Electric") {
-				move.basePower = 0;
-				move.boosts = {spe: 1};
-			}
-			if ( (target.hasAbility('stormdrain') && move.type === "Water") || (target.hasAbility('lightningrod') && move.type === "Electric") ) {
-				move.basePower = 0;
-				move.boosts = {spa: 1};
-			}
-			if (target.hasAbility('sapsipper') && move.type === "Grass") {
-				move.basePower = 0;
-				move.boosts = {atk: 1};
-			}
-			if ( (target.hasAbility('levitate') && move.type === "Ground") || (target.hasAbility('flashfire') && move.type === "Fire") ){
-				move.basePower = 0;
 			}
         },
         multihit: 2,

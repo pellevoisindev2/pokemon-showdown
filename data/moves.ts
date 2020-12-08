@@ -21405,4 +21405,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {basePower: 170},
 		contestType: "Tough",
 	},
+	momentousmaw: {
+		num: 917,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Momentous Maw",
+		pp: 25,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (!target || target.fainted || target.hp <= 0) this.heal(pokemon.baseMaxhp / 4);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		contestType: "Cool",
+	},
 };

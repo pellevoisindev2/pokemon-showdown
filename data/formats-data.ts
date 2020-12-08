@@ -2891,6 +2891,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
+	hippopotasorren: {
+		tier: "LC",
+	},
+	hippowdonorren: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
 	skorupi: {
 		tier: "LC",
 	},
@@ -6357,6 +6364,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 	},
 	hydrame: {
+		tier: "OU",
+	},
+	vampayar: {
 		tier: "OU",
 	},
 };

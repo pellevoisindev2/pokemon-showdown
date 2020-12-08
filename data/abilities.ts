@@ -5002,4 +5002,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 1035,
 	},
+	predatoryinstinct: {
+		onBasePowerPriority: 24,
+		onBasePower(basePower, attacker, defender, move) {
+			if (attacker.gender && defender.gender) {
+				if (attacker.weighthg > defender.weighthg) {
+					this.debug('Predatory Instinct boost');
+					return this.chainModify(1.5);
+				} else {
+					this.debug('Predatory Instinct weaken');
+					return this.chainModify(0.75);
+				}
+			}
+		},
+		name: "Predatory Instinct",
+		rating: 0,
+		num: 1036,
+	},
 };

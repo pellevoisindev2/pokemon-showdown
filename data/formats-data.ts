@@ -6356,4 +6356,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	muuthate: {
 		tier: "RU",
 	},
+	hydrame: {
+		tier: "OU",
+	},
 };

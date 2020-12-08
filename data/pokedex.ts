@@ -17118,4 +17118,15 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Water 1", "Field"],
 	},
+	hydrame: {
+		num: 10006,
+		name: "Hydrame",
+		types: ["Dragon", "Fire"],
+		baseStats: {hp: 110, atk: 90, def: 130, spa: 100, spd: 100, spe: 80},
+		abilities: {0: "Intimidate", 1: "Daunt", H: "Flame Body"},
+		heightm: 6.4,
+		weightkg: 300,
+		color: "Brown",
+		eggGroups: ["Water 1", "Field"],
+	},
 };

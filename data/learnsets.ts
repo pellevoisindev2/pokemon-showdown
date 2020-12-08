@@ -27358,7 +27358,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			spikyshield: ["8M", "7M"],
 			sandtomb: ["8M", "7M"],
 			sandattack: ["8M", "7M"],
-			mud-slap: ["8M", "7M"],
+			mudslap: ["8M", "7M"],
 			mudshot: ["8M", "7M"],
 			drillrun: ["8M", "7M"],
 			bulldoze: ["8M", "7M"],

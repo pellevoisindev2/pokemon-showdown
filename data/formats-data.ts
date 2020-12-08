@@ -1620,6 +1620,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "UUBL",
 		doublesTier: "DUU",
 	},
+	sneaselalmian: {
+		tier: "NU",
+		doublesTier: "LC Uber",
+	},
+	weavilealmian: {
+		tier: "UUBL",
+		doublesTier: "DUU",
+	},
 	teddiursa: {
 		tier: "LC",
 	},

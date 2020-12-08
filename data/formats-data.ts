@@ -787,7 +787,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUber)",
 	},
 	voltorb: {
-		tier: "lc",
+		tier: "LC",
 	},
 	electrode: {
 		tier: "RU",
@@ -6351,6 +6351,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "UU",
 	},
 	narpoon: {
+		tier: "RU",
+	},
+	muuthate: {
 		tier: "RU",
 	},
 };

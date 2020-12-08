@@ -17107,4 +17107,15 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Water 1", "Field"],
 	},
+	muuthate: {
+		num: 10005,
+		name: "Muuthate",
+		types: ["Ice", "Fire"],
+		baseStats: {hp: 109, atk: 126, def: 85, spa: 44, spd: 65, spe: 101},
+		abilities: {0: "Anger Point", 1: "Mountaineer", H: "Mold Breaker"},
+		heightm: 6.4,
+		weightkg: 414,
+		color: "Red",
+		eggGroups: ["Water 1", "Field"],
+	},
 };

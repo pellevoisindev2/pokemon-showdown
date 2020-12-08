@@ -21384,4 +21384,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Cosmic",
 		contestType: "Tough",
 	},
+	frostburn: {
+		num: 916,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "Frost Burn",
+		pp: 10,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fire', type);
+		},
+		priority: 0,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
+		target: "any",
+		type: "Ice",
+		zMove: {basePower: 170},
+		contestType: "Tough",
+	},
 };

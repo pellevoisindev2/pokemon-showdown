@@ -4419,7 +4419,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
-		isNonstandard: "CAP",
 		name: "Mountaineer",
 		rating: 3,
 		num: -2,

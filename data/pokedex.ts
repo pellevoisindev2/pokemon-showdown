@@ -10533,7 +10533,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	klinklanglympeian: {
 		num: 601,
-		name: "Klinklang",
+		name: "Klinklang-Lympeian",
 		types: ["Steel", "Cosmic"],
 		gender: "N",
 		baseStats: {hp: 60, atk: 70, def: 85, spa: 100, spd: 115, spe: 90},

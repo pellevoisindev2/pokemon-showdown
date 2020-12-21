@@ -58466,7 +58466,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			zapcannon: ["8L48", "7L66", "6L1", "5L66"],
 		},
 	},
-	klinklanglymepeian: {
+	klinklanglympeian: {
 		learnset: {
 			allyswitch: ["8M", "7T"],
 			assurance: ["8M"],

@@ -2721,13 +2721,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
-	cranidos: {,
+	cranidos: {
 		tier: "LC",
 	},
-	rampardos: {,
+	rampardos: {
 		tier: "UU",
 	},
-	rampardosalmian: {,
+	rampardosalmian: {
 		tier: "UU",
 	},
 	shieldon: {

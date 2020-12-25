@@ -21468,7 +21468,7 @@ export const Moves: {[moveid: string]: MoveData} = {
             },
             onTrapPokemon(target, source) {
                 if (this.effectData.source?.isActive) {
-					pokemon.tryTrap();
+					target.tryTrap();
 					source.tryTrap();
 				}
             },

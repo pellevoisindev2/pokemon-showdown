@@ -1567,7 +1567,7 @@ export const AbilitiesText = {
 	lovelylips: {
 		name: "Lovely Lips",
 		desc: "This Pokemon's kiss-based attacks have their power multiplied by 1.5.",
-		shortDesc: "This Pokemon's kiss-based attacks have 1.2x power.",
+		shortDesc: "This Pokemon's kiss-based attacks have 1.5x power.",
 	},
 	wisepower: {
 		name: "Wise Power",

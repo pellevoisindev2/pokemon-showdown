@@ -20844,7 +20844,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "self",
-		type: "Water",
+		type: "Cosmic",
 		zMove: {boost: {def: 1}},
 		contestType: "Beautiful",
 	},
@@ -21438,4 +21438,44 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spe: 1}},
 		contestType: "Tough",
 	},
+	lazysingleturnglobaltrap: {
+        num: 919,
+        accuracy: 100,
+        basePower: 0,
+        category: "Status",
+        name: "Lazy Single Turn Global Trap",
+        pp: 15,
+        priority: 0,
+        flags: {protect: 1, mirror: 1},
+        volatileStatus: 'singletrap',
+        condition: {
+            duration: 1,
+            onStart(pokemon, source) {
+                this.add('-activate', pokemon, 'Single Trap');
+            },
+            onResidualOrder: 11,
+            onResidual(pokemon) {
+                const source = this.effectData.source;
+                // G-Max Centiferno and G-Max Sandblast continue even after the user leaves the field
+                if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
+                    delete pokemon.volatiles['singletrap'];
+                    this.add('-end', pokemon, this.effectData.sourceEffect, '[singletrap]', '[silent]');
+                    return;
+                }
+            },
+            onEnd(pokemon) {
+                this.add('-end', pokemon, this.effectData.sourceEffect, '[singletrap]');
+            },
+            onTrapPokemon(target, source) {
+                if (this.effectData.source?.isActive) {
+					pokemon.tryTrap();
+					source.tryTrap();
+				}
+            },
+        },
+        secondary: null,
+        target: "normal",
+        type: "Rock",
+        contestType: "Clever",
+    },
 };

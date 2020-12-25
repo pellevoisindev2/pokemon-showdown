@@ -5028,4 +5028,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 1036,
 	},
+	tracker: {
+        onStart(pokemon) {
+            this.useMove("lazysingleturnglobaltrap", pokemon);
+        },
+        name: "Tracker",
+        rating: 2,
+        num: 1036,
+    },
 };

@@ -3913,6 +3913,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
+	bisharpalmian: {
+		tier: "UU",
+		doublesTier: "(DUU)",
+	},
 	bouffalant: {
 		randomBattleMoves: ["closecombat", "earthquake", "headcharge", "megahorn", "swordsdance"],
 		randomBattleLevel: 88,

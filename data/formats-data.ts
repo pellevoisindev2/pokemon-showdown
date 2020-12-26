@@ -6401,4 +6401,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	vampayar: {
 		tier: "OU",
 	},
+	flamake: {
+		tier: "LC",
+	},
+	debikku: {
+		tier: "NFE",
+	},
+	ribbostuma: {
+		tier: "OU",
+	},
 };

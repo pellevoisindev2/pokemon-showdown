@@ -5049,7 +5049,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             // onResidualOrder: 11,
             // onResidual(pokemon) {
                 // const source = this.effectData.source;
-                G-Max Centiferno and G-Max Sandblast continue even after the user leaves the field
+                ////G-Max Centiferno and G-Max Sandblast continue even after the user leaves the field
                 // if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
                     // delete pokemon.volatiles['rockseal'];
                     // this.add('-end', pokemon, this.effectData.sourceEffect, '[rockseal]', '[silent]');

@@ -21449,7 +21449,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         flags: {protect: 1, mirror: 1},
         volatileStatus: 'singletrap',
         condition: {
-            duration: 1,
+            duration: 2,
             onStart(pokemon, source) {
                 this.add('-activate', pokemon, 'Single Trap');
             },
@@ -21469,7 +21469,6 @@ export const Moves: {[moveid: string]: MoveData} = {
             onTrapPokemon(target, source) {
                 if (this.effectData.source?.isActive) {
 					target.tryTrap();
-					source.tryTrap();
 				}
             },
         },

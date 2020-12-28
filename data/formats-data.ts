@@ -6410,4 +6410,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ribbostuma: {
 		tier: "OU",
 	},
+	vektument: {
+		tier: "OU",
+	},
+	lustreon: {
+		tier: "OU",
+	},
+	durantsinnoh: {
+		tier: "OU",
+	},
 };

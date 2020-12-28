@@ -5073,25 +5073,25 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-end', pokemon, 'Tracker Trap', '[silent]');
 		},
 		condition: {
-            duration: 2,
+            duration: 1,
             onStart(target) {
                 this.add('-start', target, 'Tracker Trap');
 				pokemon.addVolatile('trackertrap');
 				// this.add('-activate', source, 'Tracker Trap');
                 //this.effectData.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
             },
-            onResidualOrder: 11,
-            onResidual(target) {
-                const source = this.effectData.source;
-                // G-Max Centiferno and G-Max Sandblast continue even after the user leaves the field
-                if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
-                    delete target.volatiles['trackertrap'];
-					//delete source.volatiles['trackertrap'];
-                    this.add('-end', target, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
-					//this.add('-end', source, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
-                    return;
-                }
-            },
+            // onResidualOrder: 11,
+            // onResidual(target) {
+                // const source = this.effectData.source;
+                ////G-Max Centiferno and G-Max Sandblast continue even after the user leaves the field
+                // if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
+                    // delete target.volatiles['trackertrap'];
+					////delete source.volatiles['trackertrap'];
+                    // this.add('-end', target, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
+					////this.add('-end', source, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
+                    // return;
+                // }
+            // },
             onEnd(target) {
                 this.add('-end', target, this.effectData.sourceEffect, '[trackertrap]');
 				pokemon.removeVolatile('trackertrap');

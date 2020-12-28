@@ -5071,7 +5071,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             for (const target of pokemon.side.foe.active) {
                 if (!target || !this.isAdjacent(target, pokemon)) continue;
                 if (!activated) {
-                    this.add('-ability', pokemon, 'Daunt', 'boost');
+                    this.add('-ability', pokemon, 'Tracker', 'boost');
                     activated = true;
                 }
                 if (target.volatiles['substitute']) {
@@ -5087,39 +5087,33 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             for (const target of pokemon.side.foe.active) {
                 if (!target || !this.isAdjacent(target, pokemon)) continue;
                 if (!activated) {
-                    this.add('-ability', pokemon, 'Daunt', 'boost');
+                    this.add('-ability', pokemon, 'Tracker', 'boost');
                     activated = true;
-                }
-                if (target.volatiles['substitute']) {
-                    this.add('-immune', target);
                 } else {
                     delete target.volatiles['trackertrap'];
 					this.add('-end', target, 'Tracker Trap', '[silent]');
                 }
             }
 		},
-		onResidualOrder: 11,
-        onResidual(pokemon) {
-				console.log("firstOnResidual");
-				let activated = false;
-				for (const target of pokemon.side.foe.active) {
-					if (!target || !this.isAdjacent(target, pokemon)) continue;
-					if (!activated) {
-						this.add('-ability', pokemon, 'Daunt', 'boost');
-						activated = true;
-					}
-					if (target.volatiles['substitute']) {
-						this.add('-immune', target);
-					} else {						
-						const source = this.effectData.source;
-						if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
-							delete target.volatiles['trackertrap'];
-							this.add('-end', target, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
-							return;
-						}
-					}
-				}
-        },
+		// onResidualOrder: 11,
+        // onResidual(pokemon) {
+				// console.log("firstOnResidual");
+				// let activated = false;
+				// for (const target of pokemon.side.foe.active) {
+					// if (!target || !this.isAdjacent(target, pokemon)) continue;
+					// if (!activated) {
+						// this.add('-ability', pokemon, 'Tracker', 'boost');
+						// activated = true;
+					// } else {						
+						// const source = this.effectData.source;
+						// if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
+							// delete target.volatiles['trackertrap'];
+							// this.add('-end', target, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
+							// return;
+						// }
+					// }
+				// }
+        // },
 		name: "Tracker",
 		rating: 2,
 		num: 1036,

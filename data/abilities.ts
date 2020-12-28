@@ -5035,10 +5035,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             for (const target of pokemon.side.foe.active) {
                 if (!target || !this.isAdjacent(target, pokemon)) continue;
                 if (!activated) {
-                    this.add('-ability', pokemon, 'Tracker', 'boost');
+                    //this.add('-ability', pokemon, 'Tracker', 'boost');
                     activated = true;
-                    this.add('-immune', target);
+                    //this.add('-immune', target);
                     target.addVolatile('trackertrap');
+				}
             }
 		},
 		onEnd(pokemon) {
@@ -5046,10 +5047,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			let activated = false;
             for (const target of pokemon.side.foe.active) {
                 if (!target || !this.isAdjacent(target, pokemon)) continue;
-                    this.add('-ability', pokemon, 'Tracker', 'boost');
+				if (!activated) {
+                    //this.add('-ability', pokemon, 'Tracker', 'boost');
                     activated = true;
-                    delete target.volatiles['trackertrap'];
-					this.add('-end', target, 'Tracker Trap', '[silent]');
+                    target.removeVolatile('trackertrap');
+					//this.add('-end', target, 'Tracker Trap', '[silent]');
+				}
             }
 		},
 		name: "Tracker",

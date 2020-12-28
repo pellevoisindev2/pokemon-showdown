@@ -5028,14 +5028,85 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 1036,
 	},
+	// tracker: {
+        // onStart(pokemon, source, target) {
+            // this.useMove("trackertrap", pokemon, source, target);
+        // },
+        // name: "Tracker",
+        // rating: 2,
+        // num: 1036,
+		// volatileStatus: 'rockseal',
+        // condition: {
+            // duration: 5,
+            // durationCallback(target, source) {
+                // if (source?.hasItem('gripclaw')) return 8;
+                // return this.random(5, 7);
+            // },
+            // onStart(pokemon, source) {
+                // this.add('-activate', pokemon, 'Rock Seal');
+                // this.effectData.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
+            // },
+            // onResidualOrder: 11,
+            // onResidual(pokemon) {
+                // const source = this.effectData.source;
+                G-Max Centiferno and G-Max Sandblast continue even after the user leaves the field
+                // if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
+                    // delete pokemon.volatiles['rockseal'];
+                    // this.add('-end', pokemon, this.effectData.sourceEffect, '[rockseal]', '[silent]');
+                    // return;
+                // }
+            // },
+            // onEnd(pokemon) {
+                // this.add('-end', pokemon, this.effectData.sourceEffect, '[rockseal]');
+            // },
+            // onTrapPokemon(pokemon) {
+                // if (this.effectData.source?.isActive) pokemon.tryTrap();
+            // },
+        // },
+    // },
 	tracker: {
-        onStart(pokemon, source, target) {
-            this.useMove("trackertrap", pokemon, source, target);
+		onStart(pokemon, source) {
+			pokemon.addVolatile('trackertrap');
+			source.addVolatile('trackertrap');
+		},
+		onEnd(pokemon, source) {
+			delete pokemon.volatiles['trackertrap'];
+			this.add('-end', pokemon, 'Tracker Trap', '[silent]');
+			delete source.volatiles['trackertrap'];
+			this.add('-end', source, 'Tracker Trap', '[silent]');
+		},
+		condition: {
+            duration: 2,
+            onStart(pokemon, source) {
+                this.add('-activate', pokemon, 'Tracker Trap');
+				this.add('-activate', source, 'Tracker Trap');
+                //this.effectData.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
+            },
+            onResidualOrder: 11,
+            onResidual(pokemon, source) {
+                const source = this.effectData.source;
+                // G-Max Centiferno and G-Max Sandblast continue even after the user leaves the field
+                if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
+                    delete pokemon.volatiles['trackertrap'];
+					delete source.volatiles['trackertrap'];
+                    this.add('-end', pokemon, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
+					this.add('-end', source, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
+                    return;
+                }
+            },
+            onEnd(pokemon, source) {
+                this.add('-end', pokemon, this.effectData.sourceEffect, '[trackertrap]');
+				this.add('-end', source, this.effectData.sourceEffect, '[trackertrap]');
+            },
+            onTrapPokemon(pokemon, source) {
+                if (this.effectData.source?.isActive) pokemon.tryTrap();
+				if (this.effectData.source?.isActive) source.tryTrap();
+            },
         },
-        name: "Tracker",
-        rating: 2,
-        num: 1036,
-    },
+		name: "Tracker",
+		rating: 2,
+		num: 1036,
+	},
 	radiance: {
 		onModifyTypePriority: -1,
 		onModifyType(move, pokemon) {

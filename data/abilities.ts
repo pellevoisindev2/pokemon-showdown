@@ -5065,20 +5065,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         // },
     // },
 	tracker: {
-		onStart(pokemon) {
-			pokemon.addVolatile('trackertrap');
-			//source.addVolatile('trackertrap');
-		},
-		onEnd(pokemon) {
-			delete pokemon.volatiles['trackertrap'];
-			this.add('-end', pokemon, 'Tracker Trap', '[silent]');
-			// delete source.volatiles['trackertrap'];
-			// this.add('-end', source, 'Tracker Trap', '[silent]');
-		},
 		condition: {
             duration: 2,
             onStart(pokemon) {
                 this.add('-activate', pokemon, 'Tracker Trap');
+				pokemon.addVolatile('trackertrap');
 				// this.add('-activate', source, 'Tracker Trap');
                 //this.effectData.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
             },
@@ -5096,6 +5087,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             },
             onEnd(pokemon) {
                 this.add('-end', pokemon, this.effectData.sourceEffect, '[trackertrap]');
+				pokemon.removeVolatile('trackertrap');
 				//this.add('-end', source, this.effectData.sourceEffect, '[trackertrap]');
             },
             onTrapPokemon(pokemon) {

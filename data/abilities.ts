@@ -5028,42 +5028,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 1036,
 	},
-	// tracker: {
-        // onStart(pokemon, source, target) {
-            // this.useMove("trackertrap", pokemon, source, target);
-        // },
-        // name: "Tracker",
-        // rating: 2,
-        // num: 1036,
-		// volatileStatus: 'rockseal',
-        // condition: {
-            // duration: 5,
-            // durationCallback(target, source) {
-                // if (source?.hasItem('gripclaw')) return 8;
-                // return this.random(5, 7);
-            // },
-            // onStart(pokemon, source) {
-                // this.add('-activate', pokemon, 'Rock Seal');
-                // this.effectData.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
-            // },
-            // onResidualOrder: 11,
-            // onResidual(pokemon) {
-                // const source = this.effectData.source;
-                ////G-Max Centiferno and G-Max Sandblast continue even after the user leaves the field
-                // if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
-                    // delete pokemon.volatiles['rockseal'];
-                    // this.add('-end', pokemon, this.effectData.sourceEffect, '[rockseal]', '[silent]');
-                    // return;
-                // }
-            // },
-            // onEnd(pokemon) {
-                // this.add('-end', pokemon, this.effectData.sourceEffect, '[rockseal]');
-            // },
-            // onTrapPokemon(pokemon) {
-                // if (this.effectData.source?.isActive) pokemon.tryTrap();
-            // },
-        // },
-    // },
 	tracker: {
 		onStart(pokemon) {
 			console.log("firstOnStart");
@@ -5073,12 +5037,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
                 if (!activated) {
                     this.add('-ability', pokemon, 'Tracker', 'boost');
                     activated = true;
-                }
-                if (target.volatiles['substitute']) {
                     this.add('-immune', target);
-                } else {
                     target.addVolatile('trackertrap');
-                }
             }
 		},
 		onEnd(pokemon) {
@@ -5086,34 +5046,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			let activated = false;
             for (const target of pokemon.side.foe.active) {
                 if (!target || !this.isAdjacent(target, pokemon)) continue;
-                if (!activated) {
                     this.add('-ability', pokemon, 'Tracker', 'boost');
                     activated = true;
-                } else {
                     delete target.volatiles['trackertrap'];
 					this.add('-end', target, 'Tracker Trap', '[silent]');
-                }
             }
 		},
-		// onResidualOrder: 11,
-        // onResidual(pokemon) {
-				// console.log("firstOnResidual");
-				// let activated = false;
-				// for (const target of pokemon.side.foe.active) {
-					// if (!target || !this.isAdjacent(target, pokemon)) continue;
-					// if (!activated) {
-						// this.add('-ability', pokemon, 'Tracker', 'boost');
-						// activated = true;
-					// } else {						
-						// const source = this.effectData.source;
-						// if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
-							// delete target.volatiles['trackertrap'];
-							// this.add('-end', target, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
-							// return;
-						// }
-					// }
-				// }
-        // },
 		name: "Tracker",
 		rating: 2,
 		num: 1036,

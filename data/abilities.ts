@@ -5065,42 +5065,42 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         // },
     // },
 	tracker: {
-		onStart(pokemon, source) {
+		onStart(pokemon) {
 			pokemon.addVolatile('trackertrap');
-			source.addVolatile('trackertrap');
+			//source.addVolatile('trackertrap');
 		},
-		onEnd(pokemon, source) {
+		onEnd(pokemon) {
 			delete pokemon.volatiles['trackertrap'];
 			this.add('-end', pokemon, 'Tracker Trap', '[silent]');
-			delete source.volatiles['trackertrap'];
-			this.add('-end', source, 'Tracker Trap', '[silent]');
+			// delete source.volatiles['trackertrap'];
+			// this.add('-end', source, 'Tracker Trap', '[silent]');
 		},
 		condition: {
             duration: 2,
-            onStart(pokemon, source) {
+            onStart(pokemon) {
                 this.add('-activate', pokemon, 'Tracker Trap');
-				this.add('-activate', source, 'Tracker Trap');
+				// this.add('-activate', source, 'Tracker Trap');
                 //this.effectData.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
             },
             onResidualOrder: 11,
-            onResidual(pokemon, source) {
+            onResidual(pokemon) {
                 const source = this.effectData.source;
                 // G-Max Centiferno and G-Max Sandblast continue even after the user leaves the field
                 if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
                     delete pokemon.volatiles['trackertrap'];
-					delete source.volatiles['trackertrap'];
+					//delete source.volatiles['trackertrap'];
                     this.add('-end', pokemon, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
-					this.add('-end', source, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
+					//this.add('-end', source, this.effectData.sourceEffect, '[trackertrap]', '[silent]');
                     return;
                 }
             },
-            onEnd(pokemon, source) {
+            onEnd(pokemon) {
                 this.add('-end', pokemon, this.effectData.sourceEffect, '[trackertrap]');
-				this.add('-end', source, this.effectData.sourceEffect, '[trackertrap]');
+				//this.add('-end', source, this.effectData.sourceEffect, '[trackertrap]');
             },
-            onTrapPokemon(pokemon, source) {
+            onTrapPokemon(pokemon) {
                 if (this.effectData.source?.isActive) pokemon.tryTrap();
-				if (this.effectData.source?.isActive) source.tryTrap();
+				//if (this.effectData.source?.isActive) source.tryTrap();
             },
         },
 		name: "Tracker",

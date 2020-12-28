@@ -85798,7 +85798,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 	},
 	lustreon: {
 		learnset: {
-			glowbeam: ["8M", "7M"],
+			glowingbram: ["8M", "7M"],
 			covet: ["8M", "7M"],
 			swift: ["8M", "7M"],
 			bite: ["8M", "7M"],
@@ -85900,7 +85900,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			superpower: ["8M", "7M"],
 			swagger: ["8M", "7M"],
 			toxic: ["8M", "7M"],
-			vicegrip: ["8M", "7M"],
+			visegrip: ["8M", "7M"],
 			watergun: ["8M", "7M"],
 			xscissor: ["8M", "7M"],
 		},

@@ -5030,10 +5030,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	tracker: {
         onStart(pokemon, source, target) {
-            this.useMove("lazysingleturnglobaltrap", pokemon);
+            this.useMove("trackertrap", pokemon, source, target);
         },
         name: "Tracker",
         rating: 2,
         num: 1036,
     },
+	radiance: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+				move.type = 'Light';
+				move.radianceBoosted = true;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.radianceBoosted) return this.chainModify([0x1333, 0x1000]);
+		},
+		name: "Radiance",
+		rating: 4,
+		num: 1037,
+	},
 };

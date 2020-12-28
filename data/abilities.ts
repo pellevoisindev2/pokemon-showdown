@@ -5065,13 +5065,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         // },
     // },
 	tracker: {
-		onStart(pokemon) {
-			pokemon.addVolatile('trackertrap');
-		},
-		onEnd(pokemon) {
-			delete pokemon.volatiles['trackertrap'];
-			this.add('-end', pokemon, 'Tracker Trap', '[silent]');
-		},
+		// onStart(pokemon) {
+			// pokemon.addVolatile('trackertrap');
+		// },
+		// onEnd(pokemon) {
+			// delete pokemon.volatiles['trackertrap'];
+			// this.add('-end', pokemon, 'Tracker Trap', '[silent]');
+		// },
 		condition: {
             duration: 1,
             onStart(target) {
@@ -5098,7 +5098,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				//this.add('-end', source, this.effectData.sourceEffect, '[trackertrap]');
             },
             onTrapPokemon(target) {
-                if (this.effectData.source?.isActive) target.tryTrap();
+                //if (this.effectData.source?.isActive) target.tryTrap();
 				//if (this.effectData.source?.isActive) source.tryTrap();
             },
         },

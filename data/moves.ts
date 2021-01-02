@@ -21492,4 +21492,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 		contestType: "Clever",
 	},
+	blindingflash: {
+		num: 921,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Blinding Flash",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "any",
+		type: "Light",
+		contestType: "Cool",
+	},
 };

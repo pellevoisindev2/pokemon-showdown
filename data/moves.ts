@@ -21478,4 +21478,18 @@ export const Moves: {[moveid: string]: MoveData} = {
         type: "Rock",
         contestType: "Clever",
     },
+	draconicfangs: {
+		num: 920,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Draconic Fangs",
+		pp: 10,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+		contestType: "Clever",
+	},
 };

@@ -20208,7 +20208,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         multihit: 2,
         secondary: null,
         target: "normal",
-        type: "Normal",
+        type: "Neutral",
         maxMove: {basePower: 130},
         contestType: "Tough",
     },

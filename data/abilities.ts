@@ -5084,11 +5084,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
 			this.debug('Divine Guard immunity: ' + move.id);
 			if (target.getMoveHitData(move).typeMod < 0) {
-				if (move.smartTarget) {
-					move.smartTarget = false;
-				} else {
-					this.add('-immune', target, '[from] ability: Divine Guard');
-				}
+				this.add('-immune', target, '[from] ability: Divine Guard');
 				return null;
 			}
 		},

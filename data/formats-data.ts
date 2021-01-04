@@ -4116,12 +4116,16 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
-	keldeoresolute:},
+	keldeoresolute: {
+		isNonstandard: "Past",
+	},
 	meloetta: {
 		isNonstandard: "Past",
 		tier: "RU",
 	},
-	meloettapirouette:},
+	meloettapirouette: {
+		isNonstandard: "Past",
+	},
 	genesect: {
 		randomBattleMoves: ["blazekick", "extremespeed", "flamethrower", "ironhead", "shiftgear", "thunderbolt", "uturn"],
 		randomBattleLevel: 76,
@@ -4223,8 +4227,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "NU",
 	},
-	vivillonfancy:},
-	vivillonpokeball:},
+	vivillonfancy: {
+		isNonstandard: "Past",
+	},
+	vivillonpokeball: {
+		isNonstandard: "Past",
+	},
 	litleo: {
 		isNonstandard: "Past",
 		tier: "Illegal",

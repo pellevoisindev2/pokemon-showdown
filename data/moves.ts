@@ -21229,12 +21229,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Light",
 		contestType: "Beautiful",
 	},
-	glowingbram: {
+	glowingbeam: {
 		num: 912,
 		accuracy: 100,
 		basePower: 40,
 		category: "Special",
-		name: "Glowing Bram",
+		name: "Glowing Beam",
 		pp: 25,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},

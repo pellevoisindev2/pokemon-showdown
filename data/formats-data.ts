@@ -692,10 +692,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	dodrio: {
 		tier: "RU",
 	},
-	doduojohto: {
+	doduosinnoh: {
 		tier: "LC",
 	},
-	dodriojohto: {
+	dodriosinnoh: {
 		tier: "UU",
 	},
 	seel: {

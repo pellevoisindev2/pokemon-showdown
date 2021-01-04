@@ -3133,25 +3133,63 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 		tier: "Uber",
 	},
-	arceusbug:},
-	arceusdark:},
-	arceusdragon:},
-	arceuselectric:},
-	arceusfairy:},
-	arceusfighting:},
-	arceusfire:},
-	arceusflying:},
-	arceusghost:},
-	arceusgrass:},
-	arceusground:},
-	arceusice:},
-	arceuspoison:},
-	arceuspsychic:},
-	arceusrock:},
-	arceussteel:},
-	arceuswater:},
-	arceuslight:},
-	arceuscosmic:},
+	arceusbug: {
+		isNonstandard: "Past",
+	},
+	arceusdark: {
+		isNonstandard: "Past",
+	},
+	arceusdragon: {
+		isNonstandard: "Past",
+	},
+	arceuselectric: {
+		isNonstandard: "Past",
+	},
+	arceusfairy: {
+		isNonstandard: "Past",
+	},
+	arceusfighting: {
+		isNonstandard: "Past",
+	},
+	arceusfire: {
+		isNonstandard: "Past",
+	},
+	arceusflying: {
+		isNonstandard: "Past",
+	},
+	arceusghost: {
+		isNonstandard: "Past",
+	},
+	arceusgrass: {
+		isNonstandard: "Past",
+	},
+	arceusground: {
+		isNonstandard: "Past",
+	},
+	arceusice: {
+		isNonstandard: "Past",
+	},
+	arceuspoison: {
+		isNonstandard: "Past",
+	},
+	arceuspsychic: {
+		isNonstandard: "Past",
+	},
+	arceusrock: {
+		isNonstandard: "Past",
+	},
+	arceussteel: {
+		isNonstandard: "Past",
+	},
+	arceuswater: {
+		isNonstandard: "Past",
+	},
+	arceuslight: {
+		isNonstandard: "Past",
+	},
+	arceuscosmic: {
+		isNonstandard: "Past",
+	},
 	victini: {
 		randomBattleMoves: ["boltstrike", "trick", "uturn", "vcreate", "zenheadbutt"],
 		randomBattleLevel: 82,

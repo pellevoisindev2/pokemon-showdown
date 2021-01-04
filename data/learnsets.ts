@@ -1249,6 +1249,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			venoshock: ["7M", "7L23", "6M", "5M"],
 			xscissor: ["8V", "7M", "6M", "5M", "4M"],
 			poisonhorn: ["8M", "7M"],
+			dualstrike: ["8M", "7M"],
 		},
 		eventData: [
 			{generation: 3, level: 30, moves: ["batonpass", "sludgebomb", "twineedle", "swordsdance"]},

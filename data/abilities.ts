@@ -5084,6 +5084,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
 			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
 			this.debug('Divine Guard immunity: ' + move.id);
+			console.log("move.type: "+move.type);
 			console.log("effectiveness: "+target.runEffectiveness(move));
 			console.log("smartTarget: "+move.smartTarget);
 			if (target.runEffectiveness(move) >= 0) {

@@ -21656,5 +21656,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Cosmic",
-		c
+		contestType: "Clever",
+	},
 };

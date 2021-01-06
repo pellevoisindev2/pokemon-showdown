@@ -13961,7 +13961,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		contestType: "Cool",
 	},
-	return: {
+	'return': {
 		num: 216,
 		accuracy: 100,
 		basePower: 0,

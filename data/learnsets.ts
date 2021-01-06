@@ -6950,7 +6950,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			workup: ["8M"],
 			speedstrike: ["8M", "7M"],
 			rockseal: ["8M", "7M"],
-			landslide: ["8M", "7M"],: ["8M", "7M"],
+			landslide: ["8M", "7M"],
 			poisonjab: ["8M", "7M"],
 		},
 		eventData: [

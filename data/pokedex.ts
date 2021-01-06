@@ -11333,8 +11333,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 6.5,
 		color: "White",
 		eggGroups: ["Undiscovered"],
-		otherFormes: ["Meloetta-Pirouette"],
-		formeOrder: ["Meloetta", "Meloetta-Pirouette"],
 	},
 	meloettapirouette: {
 		num: 648,
@@ -11349,8 +11347,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 6.5,
 		color: "White",
 		eggGroups: ["Undiscovered"],
-		requiredMove: "Relic Song",
-		battleOnly: "Meloetta",
+		otherFormes: ["Meloetta"],
+		formeOrder: ["Meloetta-Pirouette", "Meloetta"],
 	},
 	genesect: {
 		num: 649,

@@ -1588,6 +1588,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	gliscor: {
 		tier: "OU",
 	},
+	gligarfioren: {
+		tier: "PU",
+	},
+	gliscorfioren: {
+		tier: "RU",
+	},
 	snubbull: {
 		tier: "LC",
 	},

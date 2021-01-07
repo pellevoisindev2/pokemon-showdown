@@ -5915,4 +5915,9 @@ export const MovesText = {
 		desc: "Raises the user's Attack by 2 stages and Speed by 1 stage. User loses 50kg",
 		shortDesc: "Raises the user's Attack by 2 and Speed by 1.",
 	},
+	floralfangs: {
+		name: "Floral Fangs",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. Bite move.",
+		shortDesc: "User recovers 50% of the damage dealt.",
+	},
 };

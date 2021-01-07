@@ -5910,4 +5910,9 @@ export const MovesText = {
 		desc: "Has a 10% chance to poison the target. Boosted by Mega Launcher.",
 		shortDesc: "10% chance to poison the target.",
 	},
+	wagondance: {
+		name: "Wagon Dance",
+		desc: "Raises the user's Attack by 2 stages and Speed by 1 stage. User loses 50kg",
+		shortDesc: "Raises the user's Attack by 2 and Speed by 1.",
+	},
 };

@@ -21654,4 +21654,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Cosmic",
 		contestType: "Clever",
 	},
+	wagondance: {
+		num: 932,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Wagon Dance",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1, dance: 1},
+		boosts: {
+			atk: 2,
+			spe: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Dragon",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Cool",
+	},
 };

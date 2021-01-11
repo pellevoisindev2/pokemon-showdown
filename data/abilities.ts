@@ -5157,6 +5157,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidualSubOrder: 1,
 		onResidual(pokemon) {
 			console.log("lastItem: "+this.dex.getItem(pokemon.lastItem));
+			console.log("lastItem: "+this.dex.getItem(pokemon.item));
 			if (this.randomChance(1, 2)) {
 				if (pokemon.hp && !pokemon.item && this.dex.getItem(pokemon.lastItem)) {
 					pokemon.setItem(pokemon.lastItem);

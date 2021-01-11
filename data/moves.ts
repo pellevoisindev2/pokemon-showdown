@@ -9292,8 +9292,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onAfterHit(target, source) {
 			if (source.hp) {
 				const item = target.takeItem();
+				console.log("from knockoff - target.item: "+target.item);
 				if (item) {
 					this.add('-enditem', target, item.name, '[from] move: Knock Off', '[of] ' + source);
+					console.log("from knockoff - target.item after knockoff: "+target.item);
 				}
 			}
 		},

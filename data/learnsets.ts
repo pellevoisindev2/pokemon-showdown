@@ -16169,7 +16169,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			phantomforce: ["8M", "7M"],
 			phazingphantasm: ["8M", "7M"],
 			poltergeist: ["8M", "7M"],
-			power-uppunch: ["8M", "7M"],
+			poweruppunch: ["8M", "7M"],
 			protect: ["8M", "7M"],
 			raindance: ["8M", "7M"],
 			rest: ["8M", "7M"],

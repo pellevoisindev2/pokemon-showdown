@@ -21669,7 +21669,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "self",
-		type: "Dragon",
+		type: "Normal",
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Cool",
 	},
@@ -21687,5 +21687,44 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Grass",
 		contestType: "Tough",
+	},
+	vengefulspirit: {
+		num: 934,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Vengeful Spirit",
+		pp: 10,
+		priority: 0,
+		flags: {future: 1},
+		ignoreImmunity: true,
+		isFutureMove: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 3,
+				move: 'vengefulspirit',
+				source: source,
+				moveData: {
+					id: 'vengefulspirit',
+					name: "Vengeful Spirit",
+					accuracy: 100,
+					basePower: 120,
+					category: "Physical",
+					priority: 0,
+					flags: {future: 1},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					isFutureMove: true,
+					type: 'Ghost',
+				},
+			});
+			this.add('-start', source, 'move: Vengeful Spirit');
+			return null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		contestType: "Clever",
 	},
 };

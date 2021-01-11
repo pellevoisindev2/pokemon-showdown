@@ -948,6 +948,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "(DUU)",
 	},
+	kangaskhanvengeful: {
+		tier: "OU",
+	},
 	kangaskhanmega: {
 		isNonstandard: "PastMEGA",
 		tier: "Illegal",
@@ -2856,6 +2859,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 		doublesTier: "DUU",
 	},
+	garchompalola: {
+		tier: "OU",
+	},
 	garchompmega: {
 		isNonstandard: "PastMEGA",
 		tier: "Illegal",
@@ -3660,6 +3666,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		randomDoubleBattleLevel: 86,
 		tier: "PUBL",
 		doublesTier: "(DUU)",
+	},
+	galvantulasinnoh: {
+		tier: "PU",
 	},
 	ferroseed: {
 		tier: "LC",
@@ -5642,6 +5651,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
+	falinksoblivian: {
+		tier: "NU",
+	},
 	pincurchin: {
 		randomBattleMoves: ["risingvoltage", "scald", "spikes", "suckerpunch", "toxicspikes"],
 		randomBattleLevel: 88,
@@ -6244,6 +6256,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 	},
 	caravagon: {
+		tier: "OU",
+	},
+	immosstor: {
 		tier: "OU",
 	},
 };

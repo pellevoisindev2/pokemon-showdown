@@ -79825,7 +79825,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			cut: ["8M", "7M"],
 			dive: ["8M", "7M"],
 			metalsound: ["8M", "7M"],
-			automize: ["8M", "7M"],
+			autotomize: ["8M", "7M"],
 			mudbomb: ["8M", "7M"],
 			mudshot: ["8M", "7M"],
 			eggbomb: ["8M", "7M"],

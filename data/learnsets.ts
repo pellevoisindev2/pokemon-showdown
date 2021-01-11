@@ -79814,7 +79814,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			darkpulse: ["8M", "7M"],
 			knockoff: ["8M", "7M"],
 			bulkup: ["8M", "7M"],
-			noretreat?: ["8M", "7M"],
+			noretreat: ["8M", "7M"],
 			ironhead: ["8M", "7M"],
 			electroball: ["8M", "7M"],
 			gyroball: ["8M", "7M"],

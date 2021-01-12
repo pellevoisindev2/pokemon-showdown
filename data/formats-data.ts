@@ -6261,4 +6261,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	immosstor: {
 		tier: "OU",
 	},
+	spiritute: {
+		tier: "OU",
+	},
 };

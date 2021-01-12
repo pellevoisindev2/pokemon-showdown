@@ -5045,7 +5045,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 1034,
 	},
-    magicalarcher: {
+    mythicarcher: {
 		onModifyMovePriority: 22,
 		onModifyMove(move) {
 			if (move.category === "Physical" && !move.flags['contact']) {
@@ -5059,7 +5059,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(1.1);
 			}
 		},
-		name: "Magical Archer",
+		name: "Mythic Archer",
 		rating: 3,
 		num: 1035,
 	},
@@ -5169,4 +5169,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2.5,
 		num: 1039,
 	},
+	hideandseek: {
+        onStart(pokemon) {
+            this.useMove("substitute", pokemon);
+        },
+        name: "Hide and Seek",
+        rating: 2,
+        num: 1040,
+    },
 };

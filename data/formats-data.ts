@@ -6262,6 +6262,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 	},
 	spiritute: {
-		tier: "LC UU",
+		tier: "MEGAS",
 	},
 };

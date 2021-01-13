@@ -11410,9 +11410,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		requiredMove: "Secret Sword",
 		changesFrom: "Keldeo",
 	},
-	meloetta: {
+	meloettaaria: {
 		num: 648,
-		name: "Meloetta",
+		name: "Meloetta-Aria",
 		baseForme: "Aria",
 		types: ["Normal", "Psychic"],
 		gender: "N",
@@ -11422,13 +11422,13 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 6.5,
 		color: "White",
 		eggGroups: ["Undiscovered"],
-		otherFormes: ["Meloetta"],
-		formeOrder: ["Meloetta", "Meloetta-Pirouette-Form"],
+		otherFormes: ["Meloetta-Aria"],
+		formeOrder: ["Meloetta-Aria", "Meloetta-Pirouette-Form"],
 	},
 	meloettapirouetteform: {
 		num: 648,
 		name: "Meloetta-Pirouette-Form",
-		baseSpecies: "Meloetta",
+		baseSpecies: "Meloetta-Aria",
 		forme: "Pirouette",
 		types: ["Normal", "Fighting"],
 		gender: "N",
@@ -11452,11 +11452,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		otherFormes: ["Meloetta-Pirouette"],
-		formeOrder: ["Meloetta-Pirouette", "Meloetta-Form"],
+		formeOrder: ["Meloetta-Pirouette", "Meloetta-Aria-Form"],
 	},
-	meloettaform: {
+	meloettaariaform: {
 		num: 648,
-		name: "Meloetta-Form",
+		name: "Meloetta-Aria-Form",
 		baseSpecies: "Meloetta-Pirouette",
 		forme: "Aria",
 		types: ["Normal", "Psychic"],

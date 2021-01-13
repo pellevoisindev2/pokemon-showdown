@@ -63818,7 +63818,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 	keldeoresolute: {
 		eventOnly: true,
 	},
-	meloetta: {
+	meloettaaria: {
 		learnset: {
 			acrobatics: ["7M", "7L26", "6M", "6L26", "5M", "5L26"],
 			allyswitch: ["7T"],

@@ -111,7 +111,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 	},
 	beedrillmega: {
-		tier: "UU",
+		isNonstandard: "PastMEGA",
+		tier: "Illegal",
 	},
 	pidgey: {
 		tier: "LC",
@@ -123,7 +124,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "(PU)",
 	},
 	pidgeotmega: {
-		tier: "UU",
+		isNonstandard: "PastMEGA",
+		tier: "Illegal",
 	},
 	rattata: {
 		tier: "LC",
@@ -2193,7 +2195,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	swalot: {
-		tier: "Illegal",
+		tier: "NU",
 	},
 	carvanha: {
 		tier: "LC",
@@ -2592,8 +2594,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DUber",
 	},
 	kyogreprimal: {
-		isNonstandard: "Past",
-		tier: "Uber",
+		isNonstandard: "PastMEGA",
+		tier: "Illegal",
 	},
 	groudon: {
 		randomBattleMoves: ["earthquake", "heatcrash", "heavyslam", "stealthrock", "stoneedge", "swordsdance", "thunderwave"],
@@ -2604,8 +2606,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DUber",
 	},
 	groudonprimal: {
-		isNonstandard: "Past",
-		tier: "Uber",
+		isNonstandard: "PastMEGA",
+		tier: "Illegal",
 	},
 	rayquaza: {
 		randomBattleMoves: ["dracometeor", "dragonascent", "extremespeed", "swordsdance", "vcreate"],

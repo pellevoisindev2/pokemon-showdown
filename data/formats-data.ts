@@ -1471,6 +1471,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ampharos: {
 		tier: "NU",
 	},
+	mareepfioren: {
+		tier: "LC",
+	},
+	flaaffyfioren: {
+		tier: "NFE",
+	},
+	ampharosfioren: {
+		tier: "UU",
+	},
 	ampharosmega: {
 		isNonstandard: "PastMEGA",
 		tier: "Illegal",
@@ -5246,6 +5255,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	meltan: {
+		tier: "LC",
+		doublesTier: "(DUU)",
+	},
+	meltanunova: {
 		tier: "LC",
 		doublesTier: "(DUU)",
 	},

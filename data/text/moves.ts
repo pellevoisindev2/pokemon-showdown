@@ -5974,4 +5974,9 @@ export const MovesText = {
 		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times.",
 		shortDesc: "Hits 3 times. Each hit can miss, but power rises.",
 	},
+	wingwind: {
+		name: "Wing Wind",
+		desc: "Has a 10% chance to lower the target's Special Defense by 2 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 2.",
+	},
 };

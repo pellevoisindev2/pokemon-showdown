@@ -4038,17 +4038,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	keldeoresolute: {
 	},
-	meloettaaria: {
+	meloetta: {
 		tier: "RU",
 	},
 	meloettapirouette: {
 		tier: "OU",
-	},
-	meloettaariaform: {
-		isNonstandard: "Past",
-	},
-	meloettapirouetteform: {
-		isNonstandard: "Past",
 	},
 	genesect: {
 		randomBattleMoves: ["blazekick", "extremespeed", "flamethrower", "ironhead", "shiftgear", "thunderbolt", "uturn"],

@@ -89087,7 +89087,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			calmmind: ["8M", "7M"],
 			workup: ["8M", "7M"],
 			toxic: ["8M", "7M"],
-			acidarmour: ["8M", "7M"],
+			acidarmor: ["8M", "7M"],
 			gastroacid: ["8M", "7M"],
 			toxicspikes: ["8M", "7M"],
 			poisongas: ["8M", "7M"],

@@ -88972,7 +88972,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			poltergeist: ["8M", "7M"],
 			spookytricks: ["8M", "7M"],
 			willowisp: ["8M", "7M"],
-			glare/twave: ["8M", "7M"],
+			glare: ["8M", "7M"],
 			rockseal: ["8M", "7M"],
 			earthquake: ["8M", "7M"],
 			curse: ["8M", "7M"],

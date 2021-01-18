@@ -20711,10 +20711,15 @@ export const Moves: {[moveid: string]: MoveData} = {
                 }
                 this.effectData.move = move.id;
                 this.add('-start', target, 'Encore');
-                if (!this.queue.willMove(target) && !source.side.faintedLastTurn) {
+                if (!this.queue.willMove(target)) {
 					console.log("ajoute un tour");
                     this.effectData.duration++;
                 }
+				console.log("faintedLastTurn: "+source.side.faintedLastTurn);
+				if (source.side.faintedLastTurn) {
+					console.log("retire un tour");
+					this.effectData.duration--;
+				}
             },
             onOverrideAction(pokemon, target, move) {
                 if (move.id !== this.effectData.move) return this.effectData.move;

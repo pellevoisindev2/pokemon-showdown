@@ -20712,6 +20712,7 @@ export const Moves: {[moveid: string]: MoveData} = {
                 this.effectData.move = move.id;
                 this.add('-start', target, 'Encore');
                 if (!this.queue.willMove(target) && !source.side.faintedLastTurn) {
+					console.log("ajoute un tour");
                     this.effectData.duration++;
                 }
             },

@@ -20696,7 +20696,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         condition: {
             duration: 1,
             noCopy: true, // doesn't get copied by Z-Baton Pass
-            onStart(target, pokemon, move) {
+            onStart(target, pokemon) {
                 const noEncore = [
                     'assist', 'copycat', 'encore', 'mefirst', 'metronome', 'mimic', 'mirrormove', 'naturepower', 'sketch', 'sleeptalk', 'struggle', 'transform',
                 ];

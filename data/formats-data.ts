@@ -2298,7 +2298,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NU",
 	},
 	seviper: {
-		tier: "Illegal",
+		tier: "NU",
 	},
 	lunatone: {
 		randomBattleMoves: ["earthpower", "icebeam", "nastyplot", "powergem", "psychic", "rockpolish", "stealthrock"],
@@ -2508,7 +2508,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	luvdisc: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	bagon: {
 		tier: "LC",
@@ -3085,7 +3085,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	phione: {
-		tier: "Illegal",
+		tier: "NFE",
 	},
 	manaphy: {
 		tier: "UU",
@@ -4146,7 +4146,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	vivillonpokeball: {
 	},
 	litleo: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	pyroar: {
 		tier: "RU",

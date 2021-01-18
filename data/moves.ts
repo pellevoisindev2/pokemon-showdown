@@ -20696,7 +20696,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         condition: {
             duration: 1,
             noCopy: true, // doesn't get copied by Z-Baton Pass
-            onStart(target) {
+            onStart(target, source) {
                 const noEncore = [
                     'assist', 'copycat', 'encore', 'mefirst', 'metronome', 'mimic', 'mirrormove', 'naturepower', 'sketch', 'sleeptalk', 'struggle', 'transform',
                 ];
@@ -20711,7 +20711,7 @@ export const Moves: {[moveid: string]: MoveData} = {
                 }
                 this.effectData.move = move.id;
                 this.add('-start', target, 'Encore');
-                if (!this.queue.willMove(target)) {
+                if (!this.queue.willMove(target) && !source.side.faintedLastTurn) {
                     this.effectData.duration++;
                 }
             },
@@ -21907,7 +21907,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 95,
 		category: "Special",
 		name: "Planetary Wrath",
-		pp: 35,
+		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyType(move, pokemon) {

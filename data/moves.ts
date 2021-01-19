@@ -20697,7 +20697,7 @@ export const Moves: {[moveid: string]: MoveData} = {
         condition: {
             duration: 1,
             noCopy: true, // doesn't get copied by Z-Baton Pass
-            onStart(target, pokemon) {
+            onStart(pokemon, target) {
                 const noEncore = [
                     'assist', 'copycat', 'encore', 'mefirst', 'metronome', 'mimic', 'mirrormove', 'naturepower', 'sketch', 'sleeptalk', 'struggle', 'transform',
                 ];
@@ -20717,7 +20717,7 @@ export const Moves: {[moveid: string]: MoveData} = {
                     this.effectData.duration++;
                 }
 				console.log("faintedLastTurn: "+JSON.stringify(pokemon));
-				if (pokemon.side.faintedLastTurn) {
+				if (pokemon.side.faintedThisTurn) {
 					console.log("retire un tour");
 					this.effectData.duration--;
 				}

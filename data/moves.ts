@@ -21958,6 +21958,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		condition: {
+			onStart(pokemon) {
+				this.useMove("perishsong", pokemon);
+			},
+		},
 		onModifyType(move, pokemon) {
 			if (pokemon.getTypes()[0]) {
 				move.type = pokemon.getTypes()[0];
@@ -21966,9 +21971,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return false;
 			}
 		},
-		onStart(pokemon) {
-            this.useMove("perishsong", pokemon);
-        },
 		// onHitField(target, source, move) {
 			// let result = false;
 			// let message = false;

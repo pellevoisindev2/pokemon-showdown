@@ -4515,6 +4515,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	timereverse: {
         onStart(pokemon) {
+			if (pokemon.side.faintedLastTurn) {
+				console.log("ability détecte qu'un pote est KO au tour d'avant");
+			}
             this.useMove("lazyencore", pokemon);
         },
         name: "Time Reverse",

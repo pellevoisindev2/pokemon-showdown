@@ -21958,12 +21958,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		condition: {
-			onStart(pokemon) {
-				this.useMove("perishsong", pokemon);
-			},
-		},
 		onModifyType(move, pokemon) {
+			console.log("onModifyType");
 			if (pokemon.getTypes()[0]) {
 				move.type = pokemon.getTypes()[0];
 				console.log("move.type: "+move.type);
@@ -21971,39 +21967,42 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return false;
 			}
 		},
-		// onHitField(target, source, move) {
-			// let result = false;
-			// let message = false;
-			// for (const pokemon of this.getAllActive()) {
-				// if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
-					// this.add('-miss', source, pokemon);
-					// result = true;
-				// } else if (this.runEvent('TryHit', pokemon, source, move) === null) {
-					// result = true;
-				// } else if (!pokemon.volatiles['perishsong']) {
-					// pokemon.addVolatile('perishsong');
-					// this.add('-start', pokemon, 'perish3', '[silent]');
-					// result = true;
-					// message = true;
-				// }
-			// }
-			// if (!result) return false;
-			// if (message) this.add('-fieldactivate', 'move: Perish Song');
-		// },
-		// condition: {
-			// duration: 4,
-			// onEnd(target) {
-				// this.add('-start', target, 'perish0');
-				// target.faint();
-			// },
-			// onResidualOrder: 20,
-			// onResidual(pokemon) {
-				// const duration = pokemon.volatiles['perishsong'].duration;
-				// this.add('-start', pokemon, 'perish' + duration);
-			// },
-		// },
+		onHitField(target, source, move) {
+			console.log("onHitField");
+			let result = false;
+			let message = false;
+			for (const pokemon of this.getAllActive()) {
+				if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
+					this.add('-miss', source, pokemon);
+					result = true;
+				} else if (this.runEvent('TryHit', pokemon, source, move) === null) {
+					result = true;
+				} else if (!pokemon.volatiles['perishsong']) {
+					console.log("addVolatile-perishsong");
+					pokemon.addVolatile('perishsong');
+					this.add('-start', pokemon, 'perish3', '[silent]');
+					result = true;
+					message = true;
+				}
+			}
+			if (!result) return false;
+			if (message) this.add('-fieldactivate', 'move: Perish Song');
+		},
+		condition: {
+			duration: 4,
+			onEnd(target) {
+				this.add('-start', target, 'perish0');
+				target.faint();
+			},
+			onResidualOrder: 20,
+			onResidual(pokemon) {
+			console.log("onResidual");
+				const duration = pokemon.volatiles['perishsong'].duration;
+				this.add('-start', pokemon, 'perish' + duration);
+			},
+		},
 		secondary: null,
-		target: "normal",
+		target: "all",
 		type: "???",
 		contestType: "Tough",
 	},

@@ -4580,6 +4580,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
     // },
 	daunt: {
         onStart(pokemon) {
+			console.log("daunt-pokemon: "+JSON.stringify(pokemon));
             let activated = false;
             for (const target of pokemon.side.foe.active) {
                 if (!target || !this.isAdjacent(target, pokemon)) continue;

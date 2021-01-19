@@ -4514,10 +4514,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -4,
 	},
 	timereverse: {
-        onStart(pokemon, target) {
-			if (pokemon.side.faintedThisTurn) {
-				console.log("ability détecte qu'un pote est KO au tour d'avant");
-			}
+        onStart(pokemon) {
+			// if (pokemon.side.faintedThisTurn) {
+				// console.log("ability détecte qu'un pote est KO au tour d'avant");
+			// }
             this.useMove("lazyencore", pokemon);
         },
         name: "Time Reverse",

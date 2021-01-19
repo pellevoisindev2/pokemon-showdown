@@ -6280,7 +6280,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 	},
 	spiritute: {
-		tier: "None",
+		tier: "OU",
 	},
 	smackafaun: {
 		tier: "OU",
@@ -6304,6 +6304,21 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 	},
 	terraloosa: {
+		tier: "OU",
+	},
+	rauchick: {
+		tier: "LC",
+	},
+	symphonix: {
+		tier: "UU",
+	},
+	sunbardier: {
+		tier: "UU",
+	},
+	jorblazox: {
+		tier: "Uber",
+	},
+	scarkraken: {
 		tier: "OU",
 	},
 };

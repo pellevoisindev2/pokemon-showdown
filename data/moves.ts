@@ -20716,7 +20716,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 					console.log("ajoute un tour");
                     this.effectData.duration++;
                 }
-				console.log("faintedLastTurn: "+JSON.stringify(pokemon));
 				if (pokemon.side.faintedThisTurn) {
 					console.log("retire un tour");
 					this.effectData.duration--;
@@ -21769,7 +21768,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 50,
 		category: "Physical",
 		name: "Pressure Point",
-		pp: 8,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		volatileStatus: 'healblock',
@@ -21930,7 +21929,77 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "normal",
-		type: "Cosmic",
+		type: "???",
+		contestType: "Tough",
+	},
+	symphonicflare: {
+		num: 945,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Symphonic Flare",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, distance: 1, sound: 1, authentic: 1},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
+		target: "any",
+		type: "Fire",
+		contestType: "Cool",
+	},
+	ragnarok: {
+		num: 946,
+		accuracy: 95,
+		basePower: 90,
+		category: "Physical",
+		name: "Ragnarok",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyType(move, pokemon) {
+			if (pokemon.getTypes()[0]) {
+				move.type = pokemon.getTypes()[0];
+				console.log("move.type: "+move.type);
+			} else {
+				return false;
+			}
+		},
+		onHitField(target, source, move) {
+			let result = false;
+			let message = false;
+			for (const pokemon of this.getAllActive()) {
+				if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
+					this.add('-miss', source, pokemon);
+					result = true;
+				} else if (this.runEvent('TryHit', pokemon, source, move) === null) {
+					result = true;
+				} else if (!pokemon.volatiles['perishsong']) {
+					pokemon.addVolatile('perishsong');
+					this.add('-start', pokemon, 'perish3', '[silent]');
+					result = true;
+					message = true;
+				}
+			}
+			if (!result) return false;
+			if (message) this.add('-fieldactivate', 'move: Perish Song');
+		},
+		condition: {
+			duration: 4,
+			onEnd(target) {
+				this.add('-start', target, 'perish0');
+				target.faint();
+			},
+			onResidualOrder: 20,
+			onResidual(pokemon) {
+				const duration = pokemon.volatiles['perishsong'].duration;
+				this.add('-start', pokemon, 'perish' + duration);
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "???",
 		contestType: "Tough",
 	},
 };

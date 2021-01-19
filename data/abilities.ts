@@ -5232,4 +5232,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         rating: 2,
         num: 1040,
     },
+	orchestral: {
+		onBasePowerPriority: 7,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				this.debug('Orchestral boost');
+				return this.chainModify([0x14CD, 0x1000]);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['sound']) {
+				this.debug('Orchestral weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		name: "Orchestral",
+		rating: 3.5,
+		num: 1040,
+	},
 };

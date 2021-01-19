@@ -20715,7 +20715,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					console.log("ajoute un tour");
                     this.effectData.duration++;
                 }
-				console.log("faintedLastTurn: "+pokemon.side.faintedLastTurn);
+				console.log("faintedLastTurn: "+JSON.stringify(pokemon));
 				if (pokemon.side.faintedLastTurn) {
 					console.log("retire un tour");
 					this.effectData.duration--;

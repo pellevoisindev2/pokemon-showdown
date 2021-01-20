@@ -23,7 +23,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUber)",
 	},
 	charmander: {
-		tier: "LC",
+		tier: "LC UU",
 	},
 	charmeleon: {
 		tier: "NFE",

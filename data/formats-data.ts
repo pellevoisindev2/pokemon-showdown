@@ -52,7 +52,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUber)",
 	},
 	squirtle: {
-		tier: "LC",
+		tier: "TESTU",
 	},
 	wartortle: {
 		tier: "NFE",
